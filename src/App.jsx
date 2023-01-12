@@ -1,7 +1,6 @@
 import './App.css';
 import React,{useState} from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.min.js';
 import {About} from './components/About'
 import {Home} from './components/Home'
 import { Products } from './components/Products';

@@ -1,32 +1,33 @@
 import axios from 'axios';
-let url=""
+let url="http://localhost:5000/"
 
 export const checkUsername=async (formdata)=>{
-    const response = await axios.post(url+'/auth/checkUsername', formdata)
+    const response = await axios.post(url+'auth/checkUsername', formdata)
     return await response
     
 }
 
 export const login=async (formdata)=>{
-    const response = await axios.post(url+'/auth/login', formdata)
+    console.log(formdata)
+    const response = await axios.post(url+'auth/login', formdata)
     return await response
     
 }
 
 export const checkEmail=async (formdata)=>{
-    const response = await axios.post(url+'/auth/checkEmail', formdata)
+    const response = await axios.post(url+'auth/checkEmail', formdata)
     return await response
     
 }
 
 export const register=async (formdata)=>{
-    const response = await axios.post(url+'/auth/register', formdata)
+    const response = await axios.post(url+'auth/register', formdata)
     return await response
     
 }
 
 export const updateAvatar=async (formdata)=>{
-    const response = await axios.post(url+'/auth/updateAvatar', formdata,
+    const response = await axios.post(url+'auth/updateAvatar', formdata,
     {header:
         {"Content-Type": "multipart/form-data"}
     }
@@ -36,16 +37,16 @@ export const updateAvatar=async (formdata)=>{
 }
 
 export const deleteUser=async (formdata)=>{
-    const response = await axios.post(url+'/auth/deleteUser', formdata)
+    const response = await axios.post(url+'auth/deleteUser', formdata)
     return await response
 }
 
 export const changePassword=async (formdata)=>{
-    const response = await axios.put(url+'/auth/changePassword', formdata)
+    const response = await axios.put(url+'auth/changePassword', formdata)
     return await response
 }
 
 export const getBooks=async ()=>{
-    const response = await axios.get(url+'/admin/books')
+    const response = await axios.get(url+'admin/books')
     return await response
 }

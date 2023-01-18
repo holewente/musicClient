@@ -9,6 +9,7 @@ export const About=()=> {
     transition={{delay:0.3,duration:1.5}}>
       <br />
       <br />
+      <br />
      <h1 className='text-center'>About page</h1>
      <p className='text-center'>Spoticloud is a Professional Music Streaming Platform. <br />
       Here we will provide you only interesting content, which you will like very much. <br />

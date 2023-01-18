@@ -21,7 +21,7 @@ import {
   return (
     <div>
       <Navbar expand='sm' dark color='dark' fixed='top'>
-        <NavbarBrand href="/">Menü</NavbarBrand>
+        <NavbarBrand href="/"><img src='img/spoticloud.png' width='100px' height='40px' alt="logo" /></NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="me-auto" navbar>

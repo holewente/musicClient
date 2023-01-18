@@ -46,7 +46,7 @@ import {
               <span className='kereses'>
                 <i className="fa-solid text-danger fa-magnifying-glass" onClick={()=>setShowText(true)}></i>
               </span> : 
-              <span className='holder border border-danger'>
+              <span className='holder'>
                 <input type="text" className='text-dark' />
                 <i className="close fa-solid fa-xmark" onClick={()=>setShowText(false)}></i>
               </span>

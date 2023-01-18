@@ -4,12 +4,12 @@
     height: 100%;
 }
 .close{
-    position: absolute;
-    top: 0;
-    right: 0;
-    color: red;
+    display: flex;
+    align-items: center;
+    height: 100%;
 }
 .holder{
-    position: relative;
-    display: block;
+    display: flex;
+    align-items: center;
+    height: 100%;
 }

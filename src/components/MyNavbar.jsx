@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import "./Navbar.css";
+
 import {
   Collapse,
   Navbar,
@@ -11,10 +13,12 @@ import {
   DropdownToggle,
   DropdownMenu,
   DropdownItem,
+  Input,
 } from 'reactstrap';
 
  export const MyNavbar=({loggedInUser,setLoggedInUser})=> {
   const [isOpen, setIsOpen] = useState(false);
+  const [showtext, setShowText] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
 
@@ -36,6 +40,15 @@ import {
             </NavItem>
             <NavItem>
                 <NavLink to="products" className="nav-link" href="#">Library</NavLink>
+            </NavItem>
+            <NavItem>
+              {!showtext ? <i className="fa-solid text-danger fa-magnifying-glass" onClick={()=>setShowText(true)}></i> : 
+              <span className='holder border border-danger'>
+                <input type="text" />
+                <i className="close fa-solid fa-xmark"></i>
+              </span>
+              }
+            
             </NavItem>
           {loggedInUser?.role=='admin' &&
             <UncontrolledDropdown nav inNavbar>

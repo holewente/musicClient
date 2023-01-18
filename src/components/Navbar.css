@@ -1,0 +1,9 @@
+.close{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.holder{
+    position: relative;
+    display: block;
+}

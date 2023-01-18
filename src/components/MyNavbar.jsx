@@ -25,7 +25,7 @@ import {
   return (
     <div>
       <Navbar expand='sm' dark color='dark' fixed='top'>
-        <NavbarBrand href="/"><img src='img/spoticloud.png' width='100px' height='40px' alt="logo" /></NavbarBrand>
+        <NavbarBrand href="/"><img src='img/spoticloud.png' width='74px' height='40px' alt="logo" /></NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="me-auto" navbar>
@@ -42,10 +42,13 @@ import {
                 <NavLink to="products" className="nav-link" href="#">Library</NavLink>
             </NavItem>
             <NavItem>
-              {!showtext ? <i className="fa-solid text-danger fa-magnifying-glass" onClick={()=>setShowText(true)}></i> : 
+              {!showtext ? 
+              <span className='kereses'>
+                <i className="fa-solid text-danger fa-magnifying-glass" onClick={()=>setShowText(true)}></i>
+              </span> : 
               <span className='holder border border-danger'>
-                <input type="text" />
-                <i className="close fa-solid fa-xmark"></i>
+                <input type="text" className='text-dark' />
+                <i className="close fa-solid fa-xmark" onClick={()=>setShowText(false)}></i>
               </span>
               }
             

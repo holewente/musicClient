@@ -1,7 +1,13 @@
+.kereses{
+    position: relative;
+    display: block;
+    bottom: 1px;
+}
 .close{
     position: absolute;
     top: 0;
     right: 0;
+    color: red;
 }
 .holder{
     position: relative;

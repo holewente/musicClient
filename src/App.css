@@ -3,7 +3,10 @@
   color: azure;
 }
 .howckep{
-  height: 50;
+  -moz-animation-delay: 5000ms;
+  transform: scaleX(1);
+  transform-origin: bottom left;
+
 }
 .aboutkeret{
   border: 1px solid white;

@@ -2,6 +2,12 @@
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   color: azure;
 }
+.howckep{
+  -moz-animation-delay: 5000ms;
+  transform: scaleX(1);
+  transform-origin: bottom left;
+
+}
 .aboutkeret{
   border: 1px solid white;
   border-radius: 25px;

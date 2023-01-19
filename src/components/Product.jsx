@@ -1,9 +1,11 @@
 import React from 'react'
 import {data} from '../data.js'
 import { useParams,useNavigate } from 'react-router-dom'
-import {MyImg} from './MyImg'
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
+//import {MyImg} from './MyImg'
+//import Button from 'react-bootstrap/Button';
+//import Card from 'react-bootstrap/Card';
+import ReactPlayer from "react-player"
+
 
 export const Product=()=> { 
     const navigate = useNavigate()
@@ -12,17 +14,17 @@ export const Product=()=> {
     const selProduct=data.find(obj=>obj.id==params.id)
     console.log(selProduct)
   return (
-
-    <Card style={{ width: '18rem' }}>
-        <MyImg selProduct={selProduct}/>
-      {/*<Card.Img variant="top" src={selProduct.imgUrl} />*/}
-      <Card.Body>
-        <Card.Title>{selProduct.name}</Card.Title>
-        <Card.Text>
-          Price:{selProduct.price}
-        </Card.Text>
-        <Button variant="primary" onClick={()=>navigate('/products')}>back to products</Button>
-      </Card.Body>
-    </Card>
+    
+    <div>
+      <h1>.</h1><br />
+      <h1>Hanglejátszó sáv</h1>
+    <ReactPlayer
+      url="https://soundcloud.com/lilyeat/not-sorry-prod-trgc-x-sharkboy"
+    /> <br />
+    <ReactPlayer
+    url="https://music.youtube.com/watch?v=hLQl3WQQoQ0&list=RDCLAK5uy_nHSqCJjDrW9HBhCNdF6tWPdnOMngOv0wA"
+    /> <br />
+    
+  </div>
   )
 }

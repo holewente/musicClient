@@ -9,10 +9,8 @@ export const Contacts = () => {
       animate={{ opacity: 1 }}
       transition={{ delay: 0.3, duration: 1.5 }}
     >
-      <br />
-      <br />
-      <br />
-      <div className="contactkeret">
+      
+      <div className="contactkeret loginregisterpanel">
         <h1 className="text-center">Developers:</h1>
         <p className="text-center">
           <a href="https://github.com/holewente">

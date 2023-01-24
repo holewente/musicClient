@@ -70,7 +70,7 @@ export const Register=()=> {
     })
 
   return (
-    <Form className='login border p-3 shadow mt-1 rounded'>
+    <Form className='login border p-3 shadow loginregisterpanel rounded'>
         <h3>Sign up Form</h3>
     <FormGroup>
     <Label for="username">Felhasználónév:</Label>

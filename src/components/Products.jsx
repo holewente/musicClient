@@ -7,7 +7,7 @@ export const Products=()=> {
     const navigate=useNavigate()
 
   return (
-    <div>
+    <div className='loginregisterpanel'>
         <h1>Products</h1>
         <ul className='list-group'>
             {items.map(obj=>

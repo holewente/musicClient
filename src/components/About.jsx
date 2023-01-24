@@ -8,10 +8,8 @@ export const About = () => {
       animate={{ opacity: 1 }}
       transition={{ delay: 0.3, duration: 1.5 }}
     >
-      <br />
-      <br />
-      <br />
-      <div className="aboutkeret">
+      
+      <div className="aboutkeret loginregisterpanel">
         <h1 className="text-center">About page</h1>
         <p className="text-center">
           Spoticloud is a Professional Music Streaming Platform. <br />

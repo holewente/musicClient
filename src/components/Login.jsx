@@ -45,7 +45,7 @@ export const Login=({setLoggedInUser})=> {
     })
 
   return (
-    <Form className='login border p-3 shadow mt-1 rounded'>
+    <Form className='login border p-3 shadow loginregisterpanel rounded'>
         <h3>Login form</h3>
     <FormGroup>
     <Label for="username">Felhasználónév:</Label>

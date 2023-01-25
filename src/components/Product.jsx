@@ -14,11 +14,16 @@ export const Product=()=> {
     console.log('url paraméter:',params)
     const selProduct=data.find(obj=>obj.id==params.id)
     console.log(selProduct)
+  const size = {
+    width: '640px',
+    height: '500px'
+  }
+
   return (
     
     <div>
       <h1>.</h1><br />
-      <h1>Hanglejátszó sáv</h1>
+      <h1>Playlist</h1>
     <ReactPlayer
       url="https://soundcloud.com/lilyeat/not-sorry-prod-trgc-x-sharkboy"
     /> <br />
@@ -27,8 +32,8 @@ export const Product=()=> {
     /> <br />
     <SpotifyPlayer
   uri="https://open.spotify.com/track/2KJkKZ6u3QRm9Xpu5I2CPB"
-  size="large"
-  view='list'
+  size={size}
+  view='coverart'
   theme='black'
 />
   </div>

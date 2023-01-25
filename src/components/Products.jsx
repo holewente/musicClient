@@ -8,7 +8,7 @@ export const Products=()=> {
 
   return (
     <div className='loginregisterpanel'>
-        <h1>Products</h1>
+        <h1>Libraries</h1>
         <ul className='list-group'>
             {items.map(obj=>
             <li className='list-group-item btn btn-primary'

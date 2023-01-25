@@ -50,15 +50,15 @@ export const UserProfile=({loggedInUser,setLoggedInUser})=> {
 })
 
   return (
-    <div>
-        <h6 className='p-2 border-bottom text-center'>Felhasználói fiók</h6>
+    <div className='loginregisterpanel'>
+        <h6 className='p-2 text-center'>Felhasználói fiók</h6>
         <div className='row border p-1'>
           <div className='col-2'>Email:</div>
           <div className='col-10'>{loggedInUser.email}</div>
         </div>
         <Form>
         <FormGroup>
-    <Label for="pw" sm={2}>
+    <Label className='mt-2' for="pw" >
       Új jelszó
     </Label>
     <Col sm={8}>
@@ -69,12 +69,12 @@ export const UserProfile=({loggedInUser,setLoggedInUser})=> {
       value={newPw} onChange={(e)=>setNewpw(e.target.value)}
     />
     </Col>
-    <Col sm={4}>
+    <Col sm={6}>
         <Input 
         type='button'
         disabled={!newPw || newPw.length<6}
         value='Change Password'
-        className='btn btn-primary'
+        className='btn btn-primary mt-2'
         onClick={handleChangePw}
         />
     </Col>

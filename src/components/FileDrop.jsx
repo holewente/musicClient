@@ -19,7 +19,7 @@ export const FileDrop=({setSelFile})=> {
         types={fileTypes}
         maxSize="1"
       />
-      <p>{file ? `File name: ${file.name}` : "no files uploaded yet"}</p>
+      <p className='text-danger'>{file ? `File name: ${file.name}` : "no files uploaded yet"}</p>
     </div>
   );
 }

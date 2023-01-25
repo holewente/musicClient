@@ -19,6 +19,7 @@ import {
  export const MyNavbar=({loggedInUser,setLoggedInUser})=> {
   const [isOpen, setIsOpen] = useState(false);
   const [showtext, setShowText] = useState(false);
+  const [searching, setSearching] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
 
@@ -47,7 +48,8 @@ import {
                 <i className="fa-solid text-danger fa-magnifying-glass" onClick={()=>setShowText(true)}></i>
               </span> : 
               <span className='holder'>
-                <input type="text" className='text-dark' />
+                <input type="text" className='text-dark' placeholder='song name' />
+                  <i class="fa-solid fa-magnifying-glass-arrow-right" onClick={()=>setSearching(true)}></i>
                 <i className="close fa-solid fa-xmark" onClick={()=>setShowText(false)}></i>
               </span>
               }

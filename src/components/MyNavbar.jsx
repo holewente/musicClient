@@ -66,7 +66,7 @@ import {
                 <DropdownItem divider/>
                 <DropdownItem>
                 <NavItem>
-                <NavLink to="books">Books</NavLink>
+                <NavLink to="products">Libraries</NavLink>
                 </NavItem>
                 </DropdownItem>
               </DropdownMenu>
@@ -84,7 +84,7 @@ import {
                   </NavLink>
                 </NavItem>
                 <NavItem className='d-flex align-items-end'>
-                      <span className='btn text-info' onClick={()=>setLoggedInUser({})}>Logout</span>
+                      <span className='btn text-info mb-2' onClick={()=>setLoggedInUser({})}>Logout</span>
                 </NavItem>
             </Nav>)
             :

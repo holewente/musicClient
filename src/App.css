@@ -3,7 +3,7 @@
     color: azure;
   }
   .howckep{
-    -moz-animation-delay: 5000ms;
+    animation-delay: 5000ms;
     transform: scaleX(1);
     transform-origin: bottom left;
   

@@ -22,7 +22,15 @@ export const About = () => {
           <b>
             We hope you enjoy our Music Streaming as much as we enjoy offering
             them to you.
-          </b>{" "}
+          </b>{" "} <br /> <br />
+          <h2>Supported sites:</h2>
+          <div>
+          <img className="icons" src="/img/yt.png" alt="yt" /> 
+          <img className="icons" src="/img/sound.jpg" alt="sound" />
+          <br /><br />
+          <img className="icons" src="/img/spoti.png" alt="spoty" />
+          <p><b>Only preview</b></p>
+          </div>
         </p>
       </div>
     </motion.div>

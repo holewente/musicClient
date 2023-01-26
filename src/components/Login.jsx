@@ -68,7 +68,7 @@ export const Login=({setLoggedInUser})=> {
     <FormFeedback>Helytelen jelszó!</FormFeedback>
     </FormGroup>
     <div>
-        <Button disabled={!isValidU || !password} color='dark' id='login' onClick={()=>mutationLogin.mutate({username:username, password:password})}>
+        <Button className='btn btn-success' disabled={!isValidU || !password}  id='login' onClick={()=>mutationLogin.mutate({username:username, password:password})}>
           Login
         </Button>
     </div>

@@ -106,10 +106,10 @@ export const Register=()=> {
     <FormText>A jelszónak minimum 6 karakter hosszúnak kell lennie!</FormText>
     </FormGroup>
     <div>
-        <Input type='button' className='btn btn-dark'
+        <Input type='button' className='btn btn-success'
          disabled={!isValidU || !isValidP || !isValidE}
          onClick={()=>mutationRegister.mutate({username:username,email:email,password:password})}
-         color='dark' value='Sign Up'/>
+        value='Sign Up'/>
          
     </div>
     <div className='msg'>{msg}</div>

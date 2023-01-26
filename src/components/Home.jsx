@@ -9,6 +9,9 @@ export const Home=()=> {
         <div className='howckep'>
         <img src={require('./howc.jfif')} alt="loading..." />
         </div>
+        <div>
+        <img src="/img/kumala.gif" alt="kep2" />
+        </div>
       </motion.h1>
     </div>
   )

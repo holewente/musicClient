@@ -7,7 +7,7 @@ export const Home=()=> {
       <motion.h1 initial={{y:-250}} animate={{y:60}}>
         Home page <br />
         <div className='howckep'>
-        <img src={require('./howc.jfif')} alt="loading..." />
+        <img src='./img/howc.jfif' alt="loading..." />
         </div>
         <div>
         <img src="/img/kumala.gif" alt="kep2" />

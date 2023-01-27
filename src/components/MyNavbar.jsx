@@ -55,6 +55,9 @@ import {
               }
             
             </NavItem>
+            <NavItem>
+              <NavLink to="upload" className="nav-link" href="#">Upload</NavLink>
+            </NavItem>
           {loggedInUser?.role=='admin' &&
             <UncontrolledDropdown nav inNavbar>
               <DropdownToggle nav caret>

@@ -13,6 +13,7 @@ import { Register } from './components/Register'
 import {UserProfile} from './components/UserProfile'
 import {QueryClient,QueryClientProvider} from 'react-query'
 import {Books} from './components/Books'
+import { Upload } from './components/Upload'
 
 const queryClient = new QueryClient()
 
@@ -32,6 +33,7 @@ function App() {
       <Route path='products/:id' element={<Product/>} />
       <Route path='login' element={<Login setLoggedInUser={setLoggedInUser}/>} />
       <Route path='register' element={<Register/>} />
+      <Route path='upload' element={<Upload/>} />
       {loggedInUser?.username && 
       <Route path='userProfile' 
       element={<UserProfile loggedInUser={loggedInUser} setLoggedInUser={setLoggedInUser}/>}/>}

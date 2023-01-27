@@ -11,7 +11,7 @@ export const About = () => {
       
       <div className="aboutkeret loginregisterpanel">
         <h1 className="text-center">About page</h1>
-        <p className="text-center">
+        <div className="text-center">
           Spoticloud is a Professional Music Streaming Platform. <br />
           Here we will provide you only interesting content, which you will like
           very much. <br />
@@ -31,7 +31,7 @@ export const About = () => {
           <img className="icons" src="/img/spoti.png" alt="spoty" />
           <p><b>Only preview</b></p>
           </div>
-        </p>
+        </div>
       </div>
     </motion.div>
   );

@@ -25,7 +25,7 @@ export const About = () => {
           </b>{" "} <br /> <br />
           <h2>Supported sites:</h2>
           <div>
-          <img className="icons" src="/img/yt.png" alt="yt" /> 
+          <img className="icons" src="/img/yt.png" alt="yt" />{" "}
           <img className="icons" src="/img/sound.jpg" alt="sound" />
           <br /><br />
           <img className="icons" src="/img/spoti.png" alt="spoty" />

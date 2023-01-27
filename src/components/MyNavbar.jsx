@@ -49,7 +49,7 @@ import {
               </span> : 
               <span className='holder'>
                 <input type="text" className='text-dark' placeholder='song name' />
-                  <i class="fa-solid fa-magnifying-glass-arrow-right" onClick={()=>setSearching(true)}></i>
+                  <i className="fa-solid fa-magnifying-glass-arrow-right" onClick={()=>setSearching(true)}></i>
                 <i className="close fa-solid fa-xmark" onClick={()=>setShowText(false)}></i>
               </span>
               }

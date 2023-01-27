@@ -10,8 +10,10 @@ export const Upload=({setSelFile})=> {
     setSelFile(file);
   };
   return (
-    <div className="uploadclass file-drop-holder">
-      <h5>Drag & Drop Your Avatar</h5>
+    <div className="loginregisterpanel file-drop-holder">
+      <h5>Upload into our library!</h5>
+      <input className="feltoltcss" type="text" placeholder="Paste your song URL!" id="url" />
+      <br /><br /><input className="feltoltcss" type="text" id="title" placeholder="Give a name to your Upload!" />
       <FileUploader
         handleChange={handleChange}
         name="file"

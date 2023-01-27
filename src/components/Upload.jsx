@@ -14,6 +14,7 @@ export const Upload=({setSelFile})=> {
       <h5>Upload into our library!</h5>
       <input className="feltoltcss" type="text" placeholder="Paste your song URL!" id="url" />
       <br /><br /><input className="feltoltcss" type="text" id="title" placeholder="Give a name to your Upload!" />
+      
       <FileUploader
         handleChange={handleChange}
         name="file"

@@ -20,3 +20,9 @@
     height: 50px;
     
 }
+.fa-solid:hover{
+    cursor: pointer;
+}
+.fa-solid{
+    margin-left: 10px;
+}

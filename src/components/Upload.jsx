@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-
+export const Upload=()=> {
   return (
     <div className="loginregisterpanel file-drop-holder">
       <h5>Upload into our library!</h5>
@@ -12,3 +12,4 @@ import { useState } from "react";
     </div>
   );
 
+}

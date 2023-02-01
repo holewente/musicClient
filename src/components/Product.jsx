@@ -21,11 +21,10 @@ export const Product=()=> {
 
   return (
     
-    <div>
-      <h1>.</h1><br />
+    <div className='loginregisterpanel'>
       <h1>Playlist</h1>
     <ReactPlayer
-      url="https://soundcloud.com/lilyeat/not-sorry-prod-trgc-x-sharkboy"
+      url="https://soundcloud.com/digitalstreams/sets/deephousehits"
     /> <br />
     <ReactPlayer
     url="https://www.youtube-nocookie.com/watch?v=U3ASj1L6_sY"

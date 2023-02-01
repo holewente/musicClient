@@ -46,7 +46,18 @@ export const changePassword=async (formdata)=>{
     return await response
 }
 
-export const getBooks=async ()=>{
-    const response = await axios.get(url+'admin/books')
+export const getCateg=async ()=>{
+    const response = await axios.get(url+'music/categ')
     return await response
 }
+
+export const addMusic = async (formdata) => {
+    const response = await axios.post(url+'/add', formdata);
+    return await response;
+};
+
+export const delMusic = async (id) => {
+    const response = await axios.delete(url+'/delete/'+id);
+    return await response;
+};
+

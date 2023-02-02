@@ -1,12 +1,12 @@
 import React from 'react';
 import {useQuery} from 'react-query'
-import { getBooks } from './getData';
+import { getCateg } from './getData';
 import { Table, Thead, Tbody, Tr, Th, Td } from 'react-super-responsive-table';
 import 'react-super-responsive-table/dist/SuperResponsiveTableStyle.css';
 
 
 export const Books=()=>{
-    const {data,status}=useQuery('books',getBooks)
+    const {data,status}=useQuery('categ',getCateg)
     status=='success' && console.log(data.data)
 
   return (

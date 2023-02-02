@@ -1,7 +1,13 @@
 import { useState } from "react";
 import { addMusic,delMusic, getCateg } from "./getData";
 import { useQuery } from "react-query";
+import Select from 'react-select'
 
+const options = [
+  { value: 'chocolate', label: 'Chocolate' },
+  { value: 'strawberry', label: 'Strawberry' },
+  { value: 'vanilla', label: 'Vanilla' }
+]
 
 export const Upload=()=> {
   const {data,status}=useQuery('categ',getCateg)
@@ -9,7 +15,7 @@ export const Upload=()=> {
   return (
     <div className="loginregisterpanel file-drop-holder">
       <h5>Upload into our library!</h5>
-      <select id="" value="categ"></select>
+      <select options={options} id="" className="text-primary" value="categ"></select>
       <input className="feltoltcss text-dark" type="text" placeholder="Paste your song URL!" id="url" />
       <br /><br /><input className="feltoltcss text-dark" type="text" id="title" placeholder="Give a name to your Upload!" />
       <br /><br />

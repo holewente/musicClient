@@ -15,6 +15,7 @@
     "react-dom": "^18.2.0",
     "react-drag-drop-files": "^2.3.8",
     "react-email-validator": "^1.0.2",
+    "react-hook-select": "^1.6.3",
     "react-lazy-load-image-component": "^1.5.6",
     "react-player": "^2.11.0",
     "react-query": "^3.39.2",

@@ -41,7 +41,7 @@ import {
                 <NavLink to="contacts" className="nav-link" href="#">Contacts</NavLink>
             </NavItem>
             <NavItem>
-                <NavLink to="products" className="nav-link" href="#">Library</NavLink>
+                <NavLink to="products/1" className="nav-link" href="#">Library</NavLink>
             </NavItem>
             <NavItem>
               {!showtext ? 

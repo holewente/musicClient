@@ -10,6 +10,7 @@
   }
   .feltoltcss{
     width: 500px;
+    background-color: black;
   }
   .aboutkeret{
     border: 1px solid white;
@@ -58,5 +59,9 @@
     to {
       transform: rotate(360deg);
     }
+  }
+
+  .css-13cymwt-control{
+    color: green!important;
   }
   

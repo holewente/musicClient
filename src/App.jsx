@@ -54,7 +54,7 @@ function App() {
       </div>
 
 
-      <div className='loginregisterpanel d-flex flex-column'>
+      <div className='d-flex flex-column'>
       <Box>
       <h1 style={{ color: "green", 
                    textAlign: "center", 
@@ -64,51 +64,54 @@ function App() {
       <Container>
         <Row>
           <Column>
-            <Heading>About Us</Heading>
-            <FooterLink href="#">Aim</FooterLink>
-            <FooterLink href="#">Vision</FooterLink>
-            <FooterLink href="#">Testimonials</FooterLink>
+            <Heading><span style={{ marginLeft: "10px",fontSize: "smaller", }}>About Us </span></Heading>
+            
+            <FooterLink href="#"><span style={{ marginLeft: "10px",fontSize: "smaller", }}>
+            Aim
+                </span></FooterLink>
+            <FooterLink href="#"><span style={{ marginLeft: "10px",fontSize: "smaller", }}>Vision </span></FooterLink>
+            <FooterLink href="#"><span style={{ marginLeft: "10px",fontSize: "smaller", }}>Testimonials </span></FooterLink>
           </Column>
           <Column>
-            <Heading>Services</Heading>
-            <FooterLink href="#">Writing</FooterLink>
-            <FooterLink href="#">Internships</FooterLink>
-            <FooterLink href="#">Coding</FooterLink>
-            <FooterLink href="#">Teaching</FooterLink>
+            <Heading><span style={{ marginLeft: "10px",fontSize: "smaller", }}>Services</span></Heading>
+            <FooterLink href="#"><span style={{ marginLeft: "10px",fontSize: "smaller", }}>Writing</span></FooterLink>
+            <FooterLink href="#"><span style={{ marginLeft: "10px",fontSize: "smaller", }}>Internships</span></FooterLink>
+            <FooterLink href="#"><span style={{ marginLeft: "10px",fontSize: "smaller", }}>Coding</span></FooterLink>
+            <FooterLink href="#"><span style={{ marginLeft: "10px",fontSize: "smaller", }}>Teaching</span></FooterLink>
           </Column>
           <Column>
-            <Heading>Contact Us</Heading>
-            <FooterLink href="#">Uttar Pradesh</FooterLink>
-            <FooterLink href="#">Ahemdabad</FooterLink>
-            <FooterLink href="#">Indore</FooterLink>
-            <FooterLink href="#">Mumbai</FooterLink>
+            <Heading><span style={{ marginLeft: "10px",fontSize: "smaller", }}>Contact Us</span></Heading>
+            <FooterLink href="#"><span style={{ marginLeft: "10px",fontSize: "smaller", }}>Uttar Pradesh</span></FooterLink>
+            <FooterLink href="#"><span style={{ marginLeft: "10px",fontSize: "smaller", }}>Ahemdabad</span></FooterLink>
+            <FooterLink href="#"><span style={{ marginLeft: "10px",fontSize: "smaller", }}>Indore</span></FooterLink>
+            <FooterLink href="#"><span style={{ marginLeft: "10px",fontSize: "smaller", }}>Mumbai</span></FooterLink>
           </Column>
           <Column>
-            <Heading>Social Media</Heading>
+            <Heading><span style={{ marginLeft: "10px",fontSize: "smaller", }}>Social Media</span></Heading>
             <FooterLink href="#">
               <i className="fab fa-facebook-f">
-                <span style={{ marginLeft: "10px" }}>
+                <span style={{ marginLeft: "10px",fontSize: "smaller", }}>
                   Facebook
                 </span>
               </i>
             </FooterLink>
             <FooterLink href="#">
               <i className="fab fa-instagram">
-                <span style={{ marginLeft: "10px" }}>
+                <span style={{ marginLeft: "10px",fontSize: "smaller", }}>
                   Instagram
                 </span>
               </i>
             </FooterLink>
             <FooterLink href="#">
               <i className="fab fa-twitter">
-                <span style={{ marginLeft: "10px" }}>
+                <span style={{ marginLeft: "10px",fontSize: "smaller", }}>
                   Twitter
                 </span>
               </i>
             </FooterLink>
             <FooterLink href="#">
               <i className="fab fa-youtube">
-                <span style={{ marginLeft: "10px" }}>
+                <span style={{ marginLeft: "10px",fontSize: "smaller", }}>
                   Youtube
                 </span>
               </i>

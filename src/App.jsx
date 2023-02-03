@@ -42,10 +42,16 @@ function App() {
       {loggedInUser?.role=='admin' &&
       <Route path='books' element={<Books/>}/>}
       </Routes>
+      <Footer>
+        
+      </Footer>
     </div>
     </QueryClientProvider>
+    
 
   );
+  
 }
+
 
 export default App;

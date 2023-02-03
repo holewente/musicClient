@@ -25,6 +25,7 @@
     "react-spotify-player": "^1.0.4",
     "react-super-responsive-table": "^5.2.1",
     "reactstrap": "^9.1.5",
+    "styled-components": "^5.3.6",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

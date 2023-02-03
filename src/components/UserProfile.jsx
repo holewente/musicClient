@@ -106,6 +106,9 @@ export const UserProfile=({loggedInUser,setLoggedInUser})=> {
     </Form>
     {modal && <MyModal modal={modal} setModal={setModal}
               username={loggedInUser.username} avatar_id={loggedInUser.avatar_id} setLoggedInUser={setLoggedInUser}/> }
+              <h2>Your Profile:</h2>
+              <h3>{loggedInUser.username}</h3>
+              <img className='profilkep' src={loggedInUser.avatar} alt="" />
     </div>
   )
 }

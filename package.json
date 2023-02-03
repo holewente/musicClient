@@ -10,6 +10,7 @@
     "axios": "^1.2.1",
     "bootstrap": "^5.2.3",
     "framer-motion": "^7.7.2",
+    "rc-footer": "^0.6.8",
     "react": "^18.2.0",
     "react-bootstrap": "^2.7.0",
     "react-dom": "^18.2.0",
@@ -25,6 +26,7 @@
     "react-spotify-player": "^1.0.4",
     "react-super-responsive-table": "^5.2.1",
     "reactstrap": "^9.1.5",
+    "styled-components": "^5.3.6",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

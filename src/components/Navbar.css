@@ -33,3 +33,8 @@
     height: 600px;
     width: 600px;
 }
+.file-drop-holder{
+    align-items: center;
+    text-align: center;
+    
+}

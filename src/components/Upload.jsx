@@ -24,7 +24,6 @@ export const Upload = () => {
         options={status=="success" && options(data.data)}
         defaultValue={selectedOption}
         onChange={setSelectedOption}
-        id=""
         className="text-dark mb-4"
         value="categ"
       />
@@ -45,7 +44,7 @@ export const Upload = () => {
       <br />
       <br />
       <input
-        className="bg-primary text-dark center"
+        className="btn btn-primary bg-primary text-dark align-items-center"
         type="button"
         value="Upload your song!"
       />

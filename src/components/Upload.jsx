@@ -3,25 +3,29 @@ import { addMusic, delMusic, getCateg } from "./getData";
 import { useQuery } from "react-query";
 import Select from "react-select";
 
-const options = [
-  { value: "chocolate", label: "Chocolate" },
-  { value: "strawberry", label: "Strawberry" },
-  { value: "vanilla", label: "Vanilla" },
-];
+function options(data){
+  let arr=[]
+
+  for (let obj of data){
+    arr.push({value:obj.id,label:obj.genre})
+  }
+  return arr
+}
 
 export const Upload = () => {
   const { data, status } = useQuery("categ", getCateg);
   const [selectedOption, setSelectedOption] = useState(null);
-  status == "success" && console.log(data);
+  status == "success" && console.log(data.data);
+  
   return (
     <div className="loginregisterpanel file-drop-holder">
       <h5>Upload into our library!</h5>
       <Select
-        options={options}
+        options={status=="success" && options(data.data)}
         defaultValue={selectedOption}
         onChange={setSelectedOption}
         id=""
-        className="text-primary"
+        className="text-dark"
         value="categ"
       />
       <input

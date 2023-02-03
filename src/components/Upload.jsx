@@ -25,7 +25,7 @@ export const Upload = () => {
         defaultValue={selectedOption}
         onChange={setSelectedOption}
         id=""
-        className="text-dark"
+        className="text-dark mb-4"
         value="categ"
       />
       <input

@@ -26,7 +26,7 @@
 .fa-solid{
     margin-left: 10px;
 }
-.profilkep{
+.profilkep:hover{
     animation-delay: 5000ms;
     transform: scaleX(1);
     transform-origin: bottom left;

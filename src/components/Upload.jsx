@@ -12,6 +12,21 @@ function options(data){
   return arr
 }
 
+const colourStyles = {
+  control: styles => ({ ...styles, backgroundColor: 'black' }),
+  option: (styles, { data, isDisabled, isFocused, isSelected }) => {
+    const color = 'green';
+    return {
+      ...styles,
+      backgroundColor: isDisabled ? 'red' : 'black',
+      color: 'white',
+      cursor: isDisabled ? 'not-allowed' : 'default',
+      
+    };
+  },
+  
+};
+
 export const Upload = () => {
   const { data, status } = useQuery("categ", getCateg);
   const [selectedOption, setSelectedOption] = useState(null);
@@ -26,9 +41,10 @@ export const Upload = () => {
         onChange={setSelectedOption}
         className="text-dark mb-4"
         value="categ"
+        styles={colourStyles}
       />
       <input
-        className="feltoltcss text-dark"
+        className="feltoltcss"
         type="text"
         placeholder="Paste your song URL!"
         id="url"
@@ -36,7 +52,7 @@ export const Upload = () => {
       <br />
       <br />
       <input
-        className="feltoltcss text-dark"
+        className="feltoltcss"
         type="text"
         id="title"
         placeholder="Give a name to your Upload!"

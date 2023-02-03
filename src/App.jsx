@@ -59,7 +59,7 @@ function App() {
       <h1 style={{ color: "green", 
                    textAlign: "center", 
                    marginTop: "-50px" }}>
-        GeeksforGeeks: A Computer Science Portal for Geeks
+        SpotiCloud: Web Streaming Music Platform 
       </h1>
       <Container>
         <Row>

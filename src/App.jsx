@@ -26,7 +26,7 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <MyNavbar loggedInUser={loggedInUser} setLoggedInUser={setLoggedInUser}/>
-      <div className='holder d-flex justify-content-center row'>
+      <div className='holder d-flex justify-content-center'>
       <Routes>
       <Route path='/' element={<Home/>} />
       <Route path='about' element={<About/>} />

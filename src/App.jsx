@@ -34,7 +34,7 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <MyNavbar loggedInUser={loggedInUser} setLoggedInUser={setLoggedInUser}/>
-      <div className="content d-flex flex-column">
+      <div className="content justify-content-between d-flex flex-column">
       <div className='holder d-flex justify-content-center'>
       <Routes>
       <Route path='/' element={<Home/>} />
@@ -54,7 +54,7 @@ function App() {
       </div>
 
 
-      <div className='d-flex flex-column'>
+      <div className='footer d-flex flex-column'>
       <Box>
       <h1 style={{ color: "green", 
                    textAlign: "center", 
@@ -65,51 +65,44 @@ function App() {
         <Row>
           <Column>
             <Heading><span style={{ marginLeft: "10px",fontSize: "smaller", }}>About Us </span></Heading>
+            <FooterLink href="/about"><span style={{ marginLeft: "10px",fontSize: "smaller", }}>About our page </span></FooterLink>
             
-            <FooterLink href="#"><span style={{ marginLeft: "10px",fontSize: "smaller", }}>
-            Aim
-                </span></FooterLink>
-            <FooterLink href="#"><span style={{ marginLeft: "10px",fontSize: "smaller", }}>Vision </span></FooterLink>
-            <FooterLink href="#"><span style={{ marginLeft: "10px",fontSize: "smaller", }}>Testimonials </span></FooterLink>
           </Column>
           <Column>
             <Heading><span style={{ marginLeft: "10px",fontSize: "smaller", }}>Services</span></Heading>
-            <FooterLink href="#"><span style={{ marginLeft: "10px",fontSize: "smaller", }}>Writing</span></FooterLink>
-            <FooterLink href="#"><span style={{ marginLeft: "10px",fontSize: "smaller", }}>Internships</span></FooterLink>
-            <FooterLink href="#"><span style={{ marginLeft: "10px",fontSize: "smaller", }}>Coding</span></FooterLink>
-            <FooterLink href="#"><span style={{ marginLeft: "10px",fontSize: "smaller", }}>Teaching</span></FooterLink>
+            <FooterLink href="https://spotify.com" target='_blank' className='fab fa-spotify'><span style={{ marginLeft: "10px",fontSize: "smaller", }}>Spotify</span></FooterLink>
+            <FooterLink href="https://soundcloud.com" target='_blank' className='fab fa-soundcloud'><span style={{ marginLeft: "10px",fontSize: "smaller", }}>Soundcloud</span></FooterLink>
+            <FooterLink href="https://music.youtube.com" target='_blank' className='fab fa-youtube'><span style={{ marginLeft: "10px",fontSize: "smaller", }}>Youtube Music</span></FooterLink>
           </Column>
           <Column>
             <Heading><span style={{ marginLeft: "10px",fontSize: "smaller", }}>Contact Us</span></Heading>
-            <FooterLink href="#"><span style={{ marginLeft: "10px",fontSize: "smaller", }}>Uttar Pradesh</span></FooterLink>
-            <FooterLink href="#"><span style={{ marginLeft: "10px",fontSize: "smaller", }}>Ahemdabad</span></FooterLink>
-            <FooterLink href="#"><span style={{ marginLeft: "10px",fontSize: "smaller", }}>Indore</span></FooterLink>
-            <FooterLink href="#"><span style={{ marginLeft: "10px",fontSize: "smaller", }}>Mumbai</span></FooterLink>
+            <FooterLink href="https://github.com/holewente" target='_blank' className='fab fa-github'><span style={{ marginLeft: "10px",fontSize: "smaller", }}>holewente</span></FooterLink>
+            <FooterLink href="https://github.com/milanszabo2001" target='_blank' className='fab fa-github'><span style={{ marginLeft: "10px",fontSize: "smaller", }}>milanszabo2001</span></FooterLink>
           </Column>
           <Column>
             <Heading><span style={{ marginLeft: "10px",fontSize: "smaller", }}>Social Media</span></Heading>
-            <FooterLink href="#">
+            <FooterLink href="https://facebook.com" target='_blank'>
               <i className="fab fa-facebook-f">
                 <span style={{ marginLeft: "10px",fontSize: "smaller", }}>
                   Facebook
                 </span>
               </i>
             </FooterLink>
-            <FooterLink href="#">
+            <FooterLink href="https://instagram.com" target='_blank'> 
               <i className="fab fa-instagram">
                 <span style={{ marginLeft: "10px",fontSize: "smaller", }}>
                   Instagram
                 </span>
               </i>
             </FooterLink>
-            <FooterLink href="#">
+            <FooterLink href="https://twitter.com" target='_blank'>
               <i className="fab fa-twitter">
                 <span style={{ marginLeft: "10px",fontSize: "smaller", }}>
                   Twitter
                 </span>
               </i>
             </FooterLink>
-            <FooterLink href="#">
+            <FooterLink href="https://youtube.com" target='_blank'>
               <i className="fab fa-youtube">
                 <span style={{ marginLeft: "10px",fontSize: "smaller", }}>
                   Youtube

@@ -30,8 +30,8 @@
     animation-delay: 5000ms;
     transform: scaleX(1);
     transform-origin: bottom left;
-    height: 600px;
-    width: 600px;
+    height: 300px;
+    width: 300px;
 }
 .file-drop-holder{
     align-items: center;

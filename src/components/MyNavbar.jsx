@@ -26,7 +26,7 @@ import {
 
   return (
     <div>
-      <Navbar expand='sm' dark color='dark' fixed='top'>
+      <Navbar className='color-nav' expand='sm'  fixed='top'>
         <NavbarBrand href="/"><img src='/img/spoticloud.png' width='74px' height='40px' alt="logo" /></NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
@@ -35,13 +35,13 @@ import {
                 <NavLink to="/" className="nav-link active" aria-current="page" href="#">Home</NavLink>
             </NavItem>
             <NavItem>
-                <NavLink to="about" className="nav-link" href="#">About </NavLink>
+                <NavLink to="about" className="nav-link active" href="#">About </NavLink>
             </NavItem>
             <NavItem>
-                <NavLink to="contacts" className="nav-link" href="#">Contacts</NavLink>
+                <NavLink to="contacts" className="nav-link active" href="#">Contacts</NavLink>
             </NavItem>
             <NavItem>
-                <NavLink to="products/1" className="nav-link" href="#">Library</NavLink>
+                <NavLink to="products/1" className="nav-link active" href="#">Library</NavLink>
             </NavItem>
             <NavItem>
               {!showtext ? 
@@ -57,11 +57,11 @@ import {
             
             </NavItem>
             <NavItem>
-              <NavLink to="upload" className="nav-link" href="#">Upload</NavLink>
+              <NavLink to="upload" className="nav-link active" href="#">Upload</NavLink>
             </NavItem>
           {loggedInUser?.role=='admin' &&
             <UncontrolledDropdown nav inNavbar>
-              <DropdownToggle nav caret>
+              <DropdownToggle nav caret className='active'>
                 Admin Panel
               </DropdownToggle>
               <DropdownMenu end>
@@ -82,23 +82,23 @@ import {
           (
             <Nav navbar>
                 <NavItem className="nav-link d-flex flex-column align-items-center">
-                  <NavLink to='userProfile' className='nav-link'>
+                  <NavLink to='userProfile' className='nav-link active'>
                       <img src={loggedInUser.avatar} alt="avatar" style={{width:"20px",borderRadius:"50%"}}/>
                       {loggedInUser.username}
                   </NavLink>
                 </NavItem>
                 <NavItem className='d-flex align-items-end'>
-                      <span className='btn text-info mb-2' onClick={()=>setLoggedInUser({})}>Logout</span>
+                      <span className='btn active mb-2 nav-link ' onClick={()=>setLoggedInUser({})}>Logout</span>
                 </NavItem>
             </Nav>)
             :
             (
               <Nav navbar>
                 <NavItem>
-                    <NavLink to="login" className="nav-link">Login</NavLink>
+                    <NavLink to="login" className="nav-link active">Login</NavLink>
                 </NavItem>
                 <NavItem>
-                    <NavLink to='register' className='nav-link'>Register</NavLink>
+                    <NavLink to='register' className='nav-link active'>Register</NavLink>
                 </NavItem>
             </Nav>
             )

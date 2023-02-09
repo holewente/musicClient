@@ -64,8 +64,9 @@ function App() {
       <Container>
         <Row>
           <Column>
-            <Heading><span style={{ marginLeft: "10px",fontSize: "smaller", }}>About Us </span></Heading>
-            <FooterLink href="/about"><span style={{ marginLeft: "10px",fontSize: "smaller", }}>About our page </span></FooterLink>
+            <Heading><span style={{ marginLeft: "10px",fontSize: "smaller", }}>Main Resources </span></Heading>
+            <FooterLink href="" className='fab fa-npm'><span style={{ marginLeft: "10px",fontSize: "smaller", }}>ReactPlayer </span></FooterLink>
+            <FooterLink href="" className='fab fa-npm'><span style={{ marginLeft: "10px",fontSize: "smaller", }}>SpotifyPlayer </span></FooterLink>
             
           </Column>
           <Column>

@@ -12,7 +12,6 @@ import { Login } from './components/Login';
 import { Register } from './components/Register'
 import {UserProfile} from './components/UserProfile'
 import {QueryClient,QueryClientProvider} from 'react-query'
-import {Books} from './components/Books'
 import { Upload } from './components/Upload'
 import {
   Box,
@@ -49,7 +48,7 @@ function App() {
       <Route path='userProfile' 
       element={<UserProfile loggedInUser={loggedInUser} setLoggedInUser={setLoggedInUser}/>}/>}
       {loggedInUser?.role=='admin' &&
-      <Route path='books' element={<Books/>}/>}
+      <Route path='product/1'/>}
       </Routes>
       </div>
 

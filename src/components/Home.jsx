@@ -1,12 +1,12 @@
 import React from 'react'
-import {motion} from 'framer-motion';
+import { motion } from 'framer-motion';
 
 export const Home=()=> {
   return (
-    <div className='text-center'>
-      <motion.h1 initial={{y:-250}} animate={{y:60}}>
+    <div className='text-center mt-5'>
+      <motion.h1 initial={{y:-250}} animate={{y:60}} >
         Home page <br />
-        <div className='howckep'>
+        <div className='howckep mt-5'>
         <img src='./img/howc.jfif' alt="loading..." />
         </div>
         <div className='kep2'>

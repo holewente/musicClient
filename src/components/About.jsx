@@ -10,7 +10,7 @@ export const About = () => {
     >
       
       <div className="aboutkeret loginregisterpanel">
-        <h1 className="text-center">About page</h1>
+        <h1 className="text-center mt-2">About Us</h1>
         <div className="text-center">
           Spoticloud is a Professional Music Streaming Platform. <br />
           Here we will provide you only interesting content, which you will like
@@ -22,8 +22,16 @@ export const About = () => {
           <b>
             We hope you enjoy our Music Streaming as much as we enjoy offering
             them to you.
-          </b>{" "} <br /> <br />
-          <h2>Supported sites:</h2>
+          </b>{" "} <br />
+          <h2 className="mt-2">How to use:</h2>
+          <div className="text-center">
+            1. Copy a link from the selected supported sites from below. <br />
+            2. Go to the Upload section and paste your link in the url field. <br />
+            3. Pick a music genre, and name your desired song which you want to upload, it can be anything. <br />
+            4. Press the Upload button to add the song to your personal Library. <br />
+
+          </div>
+          <h2 className="mt-2">Supported sites:</h2>
           <div>
           <img className="icons" src="/img/yt.png" alt="yt" />{" "}
           <img className="icons" src="/img/sound.jpg" alt="sound" />

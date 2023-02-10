@@ -52,12 +52,13 @@ export const getCateg=async ()=>{
 }
 
 export const addMusic = async (formdata) => {
-    const response = await axios.post(url+'/add', formdata);
-    return await response;
+    console.log("addMusic",url)
+    const response = await axios.post(url+'music/add', formdata);
+    return response;
 };
 
 export const delMusic = async (id) => {
-    const response = await axios.delete(url+'/delete/'+id);
+    const response = await axios.delete(url+'delete/'+id);
     return await response;
 };
 

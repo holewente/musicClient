@@ -48,7 +48,7 @@ export const Login=({setLoggedInUser})=> {
     <Form className='login border p-3 shadow loginregisterpanel rounded'>
         <h3>Login form</h3>
     <FormGroup>
-    <Label for="username">Felhasználónév:</Label>
+    <Label for="username">Username:</Label>
     <Input  value={username}
         onChange={(e)=>setUsername(e.target.value)}
         className={isValidU==null? "" :( isValidU ? "is-valid" : "is-invalid")}
@@ -56,16 +56,16 @@ export const Login=({setLoggedInUser})=> {
         onBlur={handleCheckUsername}
         onKeyPress={(e)=>e.key=='Enter'? document.getElementById('password').focus() : ''}
         />
-    <FormFeedback>Nem létező felhasználónév!</FormFeedback>
+    <FormFeedback>Username not existing!</FormFeedback>
     </FormGroup>
 
     <FormGroup>
-    <Label for="password">Jelszó:</Label>
+    <Label for="password">Password:</Label>
     <Input value={password} type='password' id='password'
      className={isValidP==null? "" : (isValidP ? "is-valid" : "is-invalid")}
      onChange={(e)=>setPassword(e.target.value)}
     />
-    <FormFeedback>Helytelen jelszó!</FormFeedback>
+    <FormFeedback>Incorrect Password</FormFeedback>
     </FormGroup>
     <div>
         <Button className='btn btn-success' disabled={!isValidU || !password}  id='login' onClick={()=>mutationLogin.mutate({username:username, password:password})}>

@@ -5,7 +5,7 @@ export const Home=()=> {
   return (
     <div className='text-center mt-5'>
       <motion.h1 initial={{y:-250}} animate={{y:60}} >
-        Home page <br />
+       Spoticloud Home Page <br />
         <div className='howckep mt-5'>
         <img src='./img/howc.jfif' alt="loading..." />
         </div>

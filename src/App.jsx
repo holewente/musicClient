@@ -64,8 +64,8 @@ function App() {
         <Row>
           <Column>
             <Heading><span style={{ marginLeft: "10px",fontSize: "smaller", }}>Main Resources </span></Heading>
-            <FooterLink href="" className='fab fa-npm'><span style={{ marginLeft: "10px",fontSize: "smaller", }}>ReactPlayer </span></FooterLink>
-            <FooterLink href="" className='fab fa-npm'><span style={{ marginLeft: "10px",fontSize: "smaller", }}>SpotifyPlayer </span></FooterLink>
+            <FooterLink href="https://www.npmjs.com/package/react-player" target='_blank' className='fab fa-npm'><span style={{ marginLeft: "10px",fontSize: "smaller", }}>ReactPlayer </span></FooterLink>
+            <FooterLink href="https://www.npmjs.com/package/react-spotify-player" target='_blank' className='fab fa-npm'><span style={{ marginLeft: "10px",fontSize: "smaller", }}>SpotifyPlayer </span></FooterLink>
             
           </Column>
           <Column>

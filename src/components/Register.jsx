@@ -73,7 +73,7 @@ export const Register=()=> {
     <Form className='login border p-3 shadow loginregisterpanel rounded'>
         <h3>Sign up Form</h3>
     <FormGroup>
-    <Label for="username">Felhasználónév:</Label>
+    <Label for="username">Username:</Label>
     <Input value={username}
      onChange={(e)=>setUsername(e.target.value)}
      className={isValidU==null? "" :( isValidU ? "is-valid" : "is-invalid")}
@@ -81,7 +81,7 @@ export const Register=()=> {
      onBlur={handleCheckUsername}
      onKeyPress={(e)=>e.key=='Enter'? document.getElementById('email').focus() : ''}
      />
-    <FormFeedback>Már létező felhasználónév!</FormFeedback>
+    <FormFeedback>Username already exist!</FormFeedback>
     </FormGroup>
 
     <FormGroup>
@@ -92,7 +92,7 @@ export const Register=()=> {
      onKeyPress={(e)=>e.key=='Enter'? document.getElementById('password').focus() : ''}
      onBlur={handleCheckEmail}
      />
-    <FormFeedback>Létező email cím! / Hibás email cím.</FormFeedback>
+    <FormFeedback>Existing email address! / Wrong email address.</FormFeedback>
     </FormGroup>
 
     <FormGroup>
@@ -102,8 +102,8 @@ export const Register=()=> {
     className={isValidP==null? "" :( isValidP ? "is-valid" : "is-invalid")}
     onBlur={handleCheckPassword}
     />
-    <FormFeedback >Helytelen jelszó!</FormFeedback>
-    <FormText>A jelszónak minimum 6 karakter hosszúnak kell lennie!</FormText>
+    <FormFeedback >Wrong password!</FormFeedback>
+    <FormText>The password should be at least 6 character long!</FormText>
     </FormGroup>
     <div>
         <Input type='button' className='btn btn-success'
@@ -116,7 +116,7 @@ export const Register=()=> {
 
     {success && <div className='btn btn-outline-dark' onClick={()=>navigate('/login')}>
       
-      Jelentkezz be</div>}
+      Log-In</div>}
   </Form>
   )
 }

@@ -51,7 +51,7 @@ export const UserProfile=({loggedInUser,setLoggedInUser})=> {
 
   return (
     <div className='loginregisterpanel'>
-        <h6 className='p-2 text-center'>Felhasználói fiók</h6>
+        <h6 className='p-2 text-center'>User Profile</h6>
         <div className='row border p-1'>
           <div className='col-2'>Email:</div>
           <div className='col-10'>{loggedInUser.email}</div>
@@ -59,7 +59,7 @@ export const UserProfile=({loggedInUser,setLoggedInUser})=> {
         <Form>
         <FormGroup>
     <Label className='mt-2' for="pw" >
-      Új jelszó
+      New Password
     </Label>
     <Col sm={8}>
     <Input

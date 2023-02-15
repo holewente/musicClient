@@ -44,7 +44,7 @@ import {
                 <NavLink to="products/1" className="nav-link active" href="#">Library</NavLink>
             </NavItem>
             <NavItem>
-              {!showtext ? 
+              {/*{!showtext ? 
               <span className='kereses'>
                 <i className="fa-solid text-danger fa-magnifying-glass" onClick={()=>setShowText(true)}></i>
               </span> : 
@@ -53,7 +53,7 @@ import {
                   <i className="fa-solid fa-magnifying-glass-arrow-right" onClick={()=>setSearching(true)}></i>
                 <i className="close fa-solid fa-xmark" onClick={()=>setShowText(false)}></i>
               </span>
-              }
+              }*/}
             
             </NavItem>
             <NavItem>

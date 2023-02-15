@@ -24,6 +24,13 @@ export const Product=()=> {
     
     <div className='loginregisterpanel'>
       <h1>Playlist</h1>
+
+              <span className='holder'>
+                <input type="text" className='text-dark' placeholder='Search in Library' />
+                  <i className="fa-solid fa-magnifying-glass" ></i>
+                
+              </span> <br />
+
       <div id='zenelista'></div>
     <ReactPlayer
       url="https://soundcloud.com/digitalstreams/sets/deephousehits"

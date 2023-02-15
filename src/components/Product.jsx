@@ -6,6 +6,7 @@ import { useParams,useNavigate } from 'react-router-dom'
 //import Card from 'react-bootstrap/Card';
 import ReactPlayer from "react-player"
 import SpotifyPlayer from 'react-spotify-player';
+import { Upload, handleUpload } from './Upload'
 
 
 export const Product=()=> { 
@@ -23,6 +24,7 @@ export const Product=()=> {
     
     <div className='loginregisterpanel'>
       <h1>Playlist</h1>
+      <div id='zenelista'></div>
     <ReactPlayer
       url="https://soundcloud.com/digitalstreams/sets/deephousehits"
     /> <br />

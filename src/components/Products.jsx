@@ -1,6 +1,7 @@
 import React,{useState} from 'react'
 import {data} from '../data.js'
 import { useNavigate } from 'react-router-dom'
+import { Upload, handleUpload } from './Upload'
 
 export const Products=()=> {
     const [items,setItems]=useState(data)

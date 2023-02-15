@@ -58,7 +58,7 @@ export const addMusic = async (formdata) => {
 };
 
 export const delMusic = async (id) => {
-    const response = await axios.delete(url+'delete/'+id);
+    const response = await axios.delete(url+'user/delete'+id);
     return await response;
 };
 

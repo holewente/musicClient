@@ -2,6 +2,7 @@ import { useState } from "react";
 import { addMusic, delMusic, getCateg } from "./getData";
 import { useQuery } from "react-query";
 import Select from "react-select";
+import {useNavigate} from 'react-router-dom'
 
 
 function options(data){
@@ -42,6 +43,7 @@ export const Upload = () => {
   const [uploadSong, setUploadSong] = useState(null);
   const [title,setTitle] = useState("");
   const [url,setUrl] = useState("");
+  const navigate = useNavigate();
   status == "success" && console.log(data.data);
   
   console.log("selectedOption",selectedOption)
@@ -53,6 +55,9 @@ export const Upload = () => {
     formData.append("title",title)
     formData.append("categ_id",selectedOption.value)
     addMusic(formData)
+    alert('Your music is successfully uploaded!')
+    navigate('/products/1')
+    
   }
   return (
     <div className="loginregisterpanel file-drop-holder">
@@ -84,11 +89,13 @@ export const Upload = () => {
       />
       <br />
       <br />
+      
       <input
         className="btn btn-primary bg-primary text-dark align-items-center"
         type="button"
         onClick={handleUpload}
         value="Upload your song!"
+        
       />
     </div>
   );

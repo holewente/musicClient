@@ -16,7 +16,6 @@
     "react-dom": "^18.2.0",
     "react-drag-drop-files": "^2.3.8",
     "react-email-validator": "^1.0.2",
-    "react-hook-select": "^1.6.3",
     "react-lazy-load-image-component": "^1.5.6",
     "react-player": "^2.11.0",
     "react-query": "^3.39.2",
@@ -25,6 +24,7 @@
     "react-select": "^5.7.0",
     "react-spotify-player": "^1.0.4",
     "react-super-responsive-table": "^5.2.1",
+    "reactjs-popup": "^2.0.5",
     "reactstrap": "^9.1.5",
     "styled-components": "^5.3.6",
     "web-vitals": "^2.1.4"

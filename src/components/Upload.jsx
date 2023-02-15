@@ -22,13 +22,13 @@ function url(data){
 }
 
 const colourStyles = {
-  control: styles => ({ ...styles, backgroundColor: 'black' }),
+  control: styles => ({ ...styles, backgroundColor: 'white' }),
   option: (styles, { data, isDisabled, isFocused, isSelected }) => {
     const color = 'green';
     return {
       ...styles,
-      backgroundColor: isDisabled ? 'red' : 'black',
-      color: 'white',
+      backgroundColor: isDisabled ? 'red' : 'white',
+      color: 'black',
       cursor: isDisabled ? 'not-allowed' : 'default',
       
     };
@@ -56,7 +56,7 @@ export const Upload = () => {
   }
   return (
     <div className="loginregisterpanel file-drop-holder">
-      <h5>Upload into our library!</h5>
+      <h5 className="mt-5 mb-4">Upload into our library!</h5>
       <Select
         options={status=="success" && options(data.data)}
         defaultValue={selectedOption}

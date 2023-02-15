@@ -10,7 +10,8 @@
   }
   .feltoltcss{
     width: 500px;
-    background-color: black;
+    background-color: white;
+    color: black;
   }
   .aboutkeret{
     border: 1px solid white;

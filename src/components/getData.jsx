@@ -48,7 +48,11 @@ export const changePassword=async (formdata)=>{
 
 export const getCateg=async ()=>{
     const response = await axios.get(url+'music/categ')
-    return await response
+    return response
+}
+export const getUrl=async ()=>{
+    const response = await axios.get(url+'music/url')
+    return response
 }
 
 export const addMusic = async (formdata) => {

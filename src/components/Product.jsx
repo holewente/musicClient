@@ -8,6 +8,8 @@ import ReactPlayer from "react-player"
 import SpotifyPlayer from 'react-spotify-player';
 import { useQuery } from 'react-query'
 import { getUrl } from './getData'
+import usePictureInPicture from 'react-use-pip'
+import { useRef } from 'react';
 
 
 
@@ -35,6 +37,7 @@ export const Product=()=> {
     }
   }
 
+
   return (
     
     <div className='loginregisterpanel'>
@@ -44,7 +47,7 @@ export const Product=()=> {
                 <input type="text" className='text-dark' placeholder='Search in Library' />
                   <i className="fa-solid fa-magnifying-glass" ></i>
                 
-              </span> <br />
+              </span>
       
       
       <div id='zenelista'>
@@ -52,7 +55,7 @@ export const Product=()=> {
          {status=='success' && data.data.map(obj=>
          <span key={obj.id}>
           <h4 className='mt-5'>{obj.title}</h4>
-          {/*<input type="button" className='mb-3 btn btn-success' onClick={(event)=>handleClick(event,obj.id,obj.url)} value='Minilejátszó be/ki' />*/}
+        
           {obj.url.includes('spotify') ? 
           <SpotifyPlayer uri={obj.url}
             size={size}

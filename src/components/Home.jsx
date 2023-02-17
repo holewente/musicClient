@@ -1,6 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion';
 
+
 export const Home=()=> {
   return (
     <div className='text-center mt-5'>
@@ -13,6 +14,8 @@ export const Home=()=> {
         <img src="/img/kumala.gif" alt="kep2" />
         </div>
       </motion.h1>
+      
     </div>
+
   )
 }

@@ -81,33 +81,33 @@ function App() {
           </Column>
           <Column>
             <Heading><span style={{ marginLeft: "10px",fontSize: "smaller", }}>Social Media</span></Heading>
-            <FooterLink href="https://facebook.com" target='_blank'>
-              <i className="fab fa-facebook-f">
+            <FooterLink href="https://facebook.com" target='_blank' className="fab fa-facebook-f">
+               
                 <span style={{ marginLeft: "10px",fontSize: "smaller", }}>
                   Facebook
                 </span>
-              </i>
+              
             </FooterLink>
-            <FooterLink href="https://instagram.com" target='_blank'> 
-              <i className="fab fa-instagram">
+            <FooterLink href="https://instagram.com" target='_blank' className="fab fa-instagram"> 
+               
                 <span style={{ marginLeft: "10px",fontSize: "smaller", }}>
                   Instagram
                 </span>
-              </i>
+              
             </FooterLink>
-            <FooterLink href="https://twitter.com" target='_blank'>
-              <i className="fab fa-twitter">
+            <FooterLink href="https://twitter.com" target='_blank' className="fab fa-twitter">
+               
                 <span style={{ marginLeft: "10px",fontSize: "smaller", }}>
                   Twitter
                 </span>
-              </i>
+              
             </FooterLink>
-            <FooterLink href="https://youtube.com" target='_blank'>
-              <i className="fab fa-youtube">
+            <FooterLink href="https://youtube.com" target='_blank' className="fab fa-youtube">
+               
                 <span style={{ marginLeft: "10px",fontSize: "smaller", }}>
                   Youtube
                 </span>
-              </i>
+              
             </FooterLink>
           </Column>
         </Row>

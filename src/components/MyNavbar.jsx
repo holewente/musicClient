@@ -67,6 +67,7 @@ import {
               <DropdownMenu end>
                 <DropdownItem>User</DropdownItem>
                 <DropdownItem>Products</DropdownItem>
+                <DropdownItem>DeleteUser</DropdownItem>
                 <DropdownItem divider/>
                 <DropdownItem>
                 <NavItem>

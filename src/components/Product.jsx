@@ -51,8 +51,8 @@ export const Product=()=> {
         
          {status=='success' && data.data.map(obj=>
          <span key={obj.id}>
-          <h4>{obj.title}</h4>
-          <input type="button" className='mb-3 btn btn-success' onClick={(event)=>handleClick(event,obj.id,obj.url)} value='Minilejátszó be/ki' />
+          <h4 className='mt-5'>{obj.title}</h4>
+          {/*<input type="button" className='mb-3 btn btn-success' onClick={(event)=>handleClick(event,obj.id,obj.url)} value='Minilejátszó be/ki' />*/}
           {obj.url.includes('spotify') ? 
           <SpotifyPlayer uri={obj.url}
             size={size}

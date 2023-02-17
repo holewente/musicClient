@@ -1,5 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion';
+import { Pip } from './Pip';
 
 
 export const Home=()=> {
@@ -14,7 +15,7 @@ export const Home=()=> {
         <img src="/img/kumala.gif" alt="kep2" />
         </div>
       </motion.h1>
-      
+      <Pip />
     </div>
 
   )

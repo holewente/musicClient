@@ -35,7 +35,19 @@ export const Product=()=> {
 
       <div id='zenelista'>
          {status=='success' && data.data.map(obj=>
-          <ReactPlayer url={obj.url}/> 
+         <span key={obj.id}>
+          <h4>{obj.title}</h4>
+          {obj.url.includes('spotify') ? 
+          <SpotifyPlayer uri={obj.url}
+            size={size}
+            view='coverart'
+            theme='black'/>
+            :
+            <ReactPlayer url={obj.url}/>
+        }
+         
+         </span>
+          
           )}
       </div>
     

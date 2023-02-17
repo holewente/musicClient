@@ -6,12 +6,13 @@ import { useParams,useNavigate } from 'react-router-dom'
 //import Card from 'react-bootstrap/Card';
 import ReactPlayer from "react-player"
 import SpotifyPlayer from 'react-spotify-player';
-import { Upload } from './Upload'
 import { useQuery } from 'react-query'
 import { getUrl } from './getData'
 
 
-export const Product=()=> { 
+
+export const Product=()=> {
+   
   const { data, status } = useQuery("url", getUrl);
     const navigate = useNavigate()
     const params = useParams()
@@ -21,7 +22,19 @@ export const Product=()=> {
   const size = {
     width: '640px',
     height: '500px'
+    
   }
+  const handleClick=async (event,id,url)=>{
+  event.target.disabled = true;
+  try {
+      await document.getElementById(id).requestPictureInPicture();
+    } catch (error) {
+      // TODO: Show error message to user.
+    } finally {
+      event.target.disabled = false;
+    }
+  }
+
   return (
     
     <div className='loginregisterpanel'>
@@ -32,18 +45,24 @@ export const Product=()=> {
                   <i className="fa-solid fa-magnifying-glass" ></i>
                 
               </span> <br />
-
+      
+      
       <div id='zenelista'>
+        
          {status=='success' && data.data.map(obj=>
          <span key={obj.id}>
           <h4>{obj.title}</h4>
+          <input type="button" className='mb-3 btn btn-success' onClick={(event)=>handleClick(event,obj.id,obj.url)} value='Minilejátszó be/ki' />
           {obj.url.includes('spotify') ? 
           <SpotifyPlayer uri={obj.url}
             size={size}
             view='coverart'
             theme='black'/>
             :
-            <ReactPlayer url={obj.url}/>
+            <ReactPlayer url={obj.url}
+            controls='true'
+            pip='true'
+            id={obj}/>
         }
          
          </span>
@@ -51,12 +70,6 @@ export const Product=()=> {
           )}
       </div>
     
-    {/*<SpotifyPlayer
-  uri="https://open.spotify.com/track/2KJkKZ6u3QRm9Xpu5I2CPB"
-  size={size}
-  view='coverart'
-  theme='black'
-         />*/}
   </div>
   )
 }

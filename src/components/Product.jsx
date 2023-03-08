@@ -8,7 +8,6 @@ import ReactPlayer from "react-player"
 import SpotifyPlayer from 'react-spotify-player';
 import { useQuery } from 'react-query'
 import { getUrl } from './getData'
-import usePictureInPicture from 'react-use-pip'
 import { useRef } from 'react';
 
 

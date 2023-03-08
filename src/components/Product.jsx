@@ -36,8 +36,8 @@ export const Product=()=> {
       event.target.disabled = false;
     }
   }
-  function Welcome(props) {
-  return <h1>Hello, {props.name}</h1>;
+  function kereses(props) {
+  return ;
 }
 
 

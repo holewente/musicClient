@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState,useEffect } from 'react'
 import {data} from '../data.js'
 import { useParams,useNavigate } from 'react-router-dom'
 //import {MyImg} from './MyImg'
@@ -18,7 +18,11 @@ export const Product=()=> {
   const { data, status } = useQuery("url", getUrl);
     const navigate = useNavigate()
     const params = useParams()
+    const [items, setItems] = useState([])
     status=='success' && console.log(data.data)
+    useEffect(()=>{
+      status=='success' && setItems(data.data)
+    },[])
     //const selProduct=data.find(obj=>obj.id==params.id)
     //console.log(selProduct)
   const size = {
@@ -36,6 +40,13 @@ export const Product=()=> {
       event.target.disabled = false;
     }
   }
+  function kereses() {
+  console.log(document.getElementById("cimszo").value)
+  let selectedTitle=document.getElementById("cimszo").value
+  let newItems= items.filter(obj=>obj.title.includes(selectedTitle))
+  setItems(newItems)
+}
+
 
 
   return (
@@ -44,15 +55,15 @@ export const Product=()=> {
       <h1>Playlist</h1>
 
               <span className='holder'>
-                <input type="text" className='text-dark' placeholder='Search in Library' />
-                  <i className="fa-solid fa-magnifying-glass" ></i>
+                <input id='cimszo' type="text" className='text-dark' placeholder='Search in Library' />
+                  <i className="fa-solid fa-magnifying-glass" onClick={()=>kereses()} ></i>
                 
               </span>
       
       
       <div id='zenelista'>
         
-         {status=='success' && data.data.map(obj=>
+         {status=='success' && items.map(obj=>
          <span key={obj.id}>
           <h4 className='mt-5'>{obj.title}</h4>
         
@@ -72,6 +83,7 @@ export const Product=()=> {
           
           )}
       </div>
+      {items.length==0 && <div>No title found...</div>}
     
   </div>
   )

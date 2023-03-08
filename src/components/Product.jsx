@@ -36,6 +36,10 @@ export const Product=()=> {
       event.target.disabled = false;
     }
   }
+  function Welcome(props) {
+  return <h1>Hello, {props.name}</h1>;
+}
+
 
 
   return (
@@ -45,7 +49,7 @@ export const Product=()=> {
 
               <span className='holder'>
                 <input type="text" className='text-dark' placeholder='Search in Library' />
-                  <i className="fa-solid fa-magnifying-glass" ></i>
+                  <i className="fa-solid fa-magnifying-glass" onClick="kereses" ></i>
                 
               </span>
       

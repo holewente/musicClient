@@ -4,24 +4,25 @@ import { useParams,useNavigate } from 'react-router-dom'
 //import {MyImg} from './MyImg'
 //import Button from 'react-bootstrap/Button';
 //import Card from 'react-bootstrap/Card';
-import ReactPlayer from "react-player"
 import SpotifyPlayer from 'react-spotify-player';
 import { useQuery } from 'react-query'
 import { getUrl } from './getData'
 import { useRef } from 'react';
+import {MySpinner} from './MySpinner'
+import ReactPlayer from 'react-player/lazy';
 
 
 
 export const Product=()=> {
    
-  const { data, status } = useQuery("url", getUrl);
+  const { data, status, isLoading } = useQuery("url", getUrl);
     const navigate = useNavigate()
     const params = useParams()
     const [items, setItems] = useState([])
     status=='success' && console.log(data.data)
     useEffect(()=>{
       status=='success' && setItems(data.data)
-    },[])
+    },[status])
     //const selProduct=data.find(obj=>obj.id==params.id)
     //console.log(selProduct)
   const size = {
@@ -46,8 +47,7 @@ export const Product=()=> {
   setItems(newItems)
 }
 
-
-
+console.log(isLoading,"isLoading")
   return (
     
     <div className='loginregisterpanel'>
@@ -59,7 +59,7 @@ export const Product=()=> {
                 
               </span>
       
-      
+      {isLoading && <MySpinner/>}
       <div id='zenelista'>
         
          {status=='success' && items.map(obj=>

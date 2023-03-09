@@ -17,12 +17,15 @@ export const Product=()=> {
    
   const { data, status, isLoading } = useQuery("url", getUrl);
     const navigate = useNavigate()
+    const [searchedText, setSearchedText] = useState("")
     const params = useParams()
     const [items, setItems] = useState([])
+    
+
     status=='success' && console.log(data.data)
     useEffect(()=>{
       status=='success' && setItems(data.data)
-    },[status])
+    },[status,searchedText])
     //const selProduct=data.find(obj=>obj.id==params.id)
     //console.log(selProduct)
   const size = {
@@ -41,11 +44,12 @@ export const Product=()=> {
     }
   }
   function kereses() {
-  console.log(document.getElementById("cimszo").value)
-  let selectedTitle=document.getElementById("cimszo").value
-  let newItems= items.filter(obj=>obj.title.includes(selectedTitle))
+  /*console.log(document.getElementById("cimszo").value)
+  let selectedTitle=document.getElementById("cimszo").value*/
+  let newItems= items.filter(obj=>obj.title.toLowerCase().includes(searchedText.toLowerCase()))
   setItems(newItems)
 }
+/*const filterNotes = cimszo.filter((noteText) => noteText.title.toLowerCase().includes(searchText.toLowerCase())); */
 
 console.log(isLoading,"isLoading")
   return (
@@ -54,7 +58,8 @@ console.log(isLoading,"isLoading")
       <h1>Playlist</h1>
 
               <span className='holder'>
-                <input id='cimszo' type="text" className='text-dark' placeholder='Search in Library' />
+                <input id='cimszo' type="text" value={searchedText} className='text-dark' placeholder='Search in Library'
+                onChange={(event)=>setSearchedText(event.target.value)} />
                   <i className="fa-solid fa-magnifying-glass" onClick={()=>kereses()} ></i>
                 
               </span>

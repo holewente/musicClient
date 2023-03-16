@@ -69,7 +69,7 @@ console.log(isLoading,"isLoading")
         
          {status=='success' && items.map(obj=>
          <span key={obj.id}>
-          <h4 className='mt-5'>{obj.title}</h4>
+          <h4 className='cimsor mt-5'>{obj.title}</h4>
         
           {obj.url.includes('spotify') ? 
           <SpotifyPlayer uri={obj.url}

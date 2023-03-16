@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
-import "../App.css"
+import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
+import "../App.css";
 import "./Navbar.css";
-
 
 import {
   Collapse,
@@ -16,9 +15,9 @@ import {
   DropdownMenu,
   DropdownItem,
   Input,
-} from 'reactstrap';
+} from "reactstrap";
 
- export const MyNavbar=({loggedInUser,setLoggedInUser})=> {
+export const MyNavbar = ({ loggedInUser, setLoggedInUser }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [showtext, setShowText] = useState(false);
   const [searching, setSearching] = useState(false);
@@ -27,24 +26,54 @@ import {
 
   return (
     <div>
-      <Navbar className='color-nav' expand='sm'  fixed='top'>
-        <NavbarBrand href="/"><img src='/img/spoticloud.png' width='74px' height='40px' alt="logo" /></NavbarBrand>
+      <Navbar className="color-nav" expand="sm" fixed="top">
+        <NavbarBrand href="/">
+          <img
+            src="/img/spoticloud.png"
+            width="74px"
+            height="40px"
+            alt="logo"
+          />
+        </NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="me-auto" navbar>
             <NavItem>
-                <NavLink to="/" className="menuelemek nav-link active" aria-current="page" href="#">
-                  
-                  Home</NavLink>
+              <NavLink
+                to="/"
+                className="menuelemek nav-link active"
+                aria-current="page"
+                href="#"
+              >
+                Home
+              </NavLink>
             </NavItem>
             <NavItem>
-                <NavLink to="about" className="menuelemek nav-link active" href="#">About</NavLink>
+              <NavLink
+                to="about"
+                className="menuelemek nav-link active"
+                href="#"
+              >
+                About
+              </NavLink>
             </NavItem>
             <NavItem>
-                <NavLink to="contacts" className="menuelemek nav-link active" href="#">Contacts</NavLink>
+              <NavLink
+                to="contacts"
+                className="menuelemek nav-link active"
+                href="#"
+              >
+                Contacts
+              </NavLink>
             </NavItem>
             <NavItem>
-                <NavLink to="products/1" className="menuelemek nav-link active" href="#">Library</NavLink>
+              <NavLink
+                to="products/1"
+                className="menuelemek nav-link active"
+                href="#"
+              >
+                Library
+              </NavLink>
             </NavItem>
             <NavItem>
               {/*{!showtext ? 
@@ -57,58 +86,76 @@ import {
                 <i className="close fa-solid fa-xmark" onClick={()=>setShowText(false)}></i>
               </span>
               }*/}
-            
             </NavItem>
             <NavItem>
-              <NavLink to="upload" className="menuelemek nav-link active" href="#">Upload</NavLink>
+              <NavLink
+                to="upload"
+                className="menuelemek nav-link active"
+                href="#"
+              >
+                Upload
+              </NavLink>
             </NavItem>
-          {loggedInUser?.role=='admin' &&
-            <UncontrolledDropdown nav inNavbar>
-              <DropdownToggle nav caret className='menuelemek active'>
-                Admin Panel
-              </DropdownToggle>
-              <DropdownMenu end>
-                <DropdownItem>User</DropdownItem>
-                <DropdownItem>Products</DropdownItem>
-                <DropdownItem>DeleteUser</DropdownItem>
-                <DropdownItem divider/>
-                <DropdownItem>
-                <NavItem>
-                <NavLink to="products">Libraries</NavLink>
-                </NavItem>
-                </DropdownItem>
-              </DropdownMenu>
-            </UncontrolledDropdown>
- }
+            {loggedInUser?.role == "admin" && (
+              <UncontrolledDropdown nav inNavbar>
+                <DropdownToggle nav caret className="menuelemek active">
+                  Admin Panel
+                </DropdownToggle>
+                <DropdownMenu end>
+                  <DropdownItem>User</DropdownItem>
+                  <DropdownItem>Products</DropdownItem>
+                  <DropdownItem>
+                    <NavItem>
+                      {" "}
+                      <NavLink to="deleteuser">DeleteUser</NavLink>
+                    </NavItem>
+                  </DropdownItem>
+                  <DropdownItem divider />
+                </DropdownMenu>
+              </UncontrolledDropdown>
+            )}
           </Nav>
-      
-          {loggedInUser?.username? 
-          (
+
+          {loggedInUser?.username ? (
             <Nav navbar>
-                <NavItem className="nav-link d-flex flex-column align-items-center">
-                  <NavLink to='userProfile' className='menuelemek nav-link active'>
-                      <img src={loggedInUser.avatar} alt="avatar" style={{width:"20px",borderRadius:"50%"}}/>
-                      {loggedInUser.username}
-                  </NavLink>
-                </NavItem>
-                <NavItem className='d-flex align-items-end'>
-                      <span className='menuelemek btn active mb-2 nav-link ' onClick={()=>setLoggedInUser({})}>Logout</span>
-                </NavItem>
-            </Nav>)
-            :
-            (
-              <Nav navbar>
-                <NavItem>
-                    <NavLink to="login" className="menuelemek nav-link active">Login</NavLink>
-                </NavItem>
-                <NavItem>
-                    <NavLink to='register' className='menuelemek nav-link active'>Register</NavLink>
-                </NavItem>
+              <NavItem className="nav-link d-flex flex-column align-items-center">
+                <NavLink
+                  to="userProfile"
+                  className="menuelemek nav-link active"
+                >
+                  <img
+                    src={loggedInUser.avatar}
+                    alt="avatar"
+                    style={{ width: "20px", borderRadius: "50%" }}
+                  />
+                  {loggedInUser.username}
+                </NavLink>
+              </NavItem>
+              <NavItem className="d-flex align-items-end">
+                <span
+                  className="menuelemek btn active mb-2 nav-link "
+                  onClick={() => setLoggedInUser({})}
+                >
+                  Logout
+                </span>
+              </NavItem>
             </Nav>
-            )
-}
+          ) : (
+            <Nav navbar>
+              <NavItem>
+                <NavLink to="login" className="menuelemek nav-link active">
+                  Login
+                </NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink to="register" className="menuelemek nav-link active">
+                  Register
+                </NavLink>
+              </NavItem>
+            </Nav>
+          )}
         </Collapse>
       </Navbar>
     </div>
   );
-}
+};

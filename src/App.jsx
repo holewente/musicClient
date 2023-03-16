@@ -13,6 +13,7 @@ import { Register } from './components/Register'
 import {UserProfile} from './components/UserProfile'
 import {QueryClient,QueryClientProvider} from 'react-query'
 import { Upload } from './components/Upload'
+import { DeleteUser } from './components/DeleteUser'
 import {
   Box,
   Container,
@@ -48,7 +49,7 @@ function App() {
       <Route path='userProfile' 
       element={<UserProfile loggedInUser={loggedInUser} setLoggedInUser={setLoggedInUser}/>}/>}
       {loggedInUser?.role=='admin' &&
-      <Route path='product/1'/>}
+      <Route path='deleteuser' element={<DeleteUser/>}/>}
       </Routes>
       </div>
 

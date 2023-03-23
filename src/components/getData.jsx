@@ -8,7 +8,7 @@ export const checkUsername=async (formdata)=>{
 }
 
 export const login=async (formdata)=>{
-    console.log(formdata)
+    console.log(formdata,"login")
     const response = await axios.post(url+'auth/login', formdata)
     return await response
     
@@ -37,7 +37,7 @@ export const updateAvatar=async (formdata)=>{
 }
 
 export const deleteUser=async (formdata)=>{
-    const response = await axios.post(url+'auth/deleteUser', formdata)
+    const response = await axios.delete(url+'auth/deleteUser', formdata)
     return await response
 }
 
@@ -64,6 +64,11 @@ export const addMusic = async (formdata) => {
 
 export const delMusic = async (id) => {
     const response = await axios.delete(url+'user/delete'+id);
+    return await response;
+};
+
+export const getUsers = async () => {
+    const response = await axios.get(url+'auth/users');
     return await response;
 };
 

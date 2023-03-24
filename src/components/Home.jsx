@@ -4,10 +4,10 @@ import { TwitterTimelineEmbed, TwitterShareButton, TwitterFollowButton, TwitterH
 
 
 export const Home=()=> {
-  console.log("Ambatukam")
+  console.log("Ambatukam AMBASSIIIIN OMAYGOT ")
   return (
 
-    <div className='text-center mt-5'>
+    <div className='text-center mt-5 w-100'>
       <motion.h1 initial={{y:-250}} animate={{y:60}} >
        Spoticloud Home Page <br />
 
@@ -33,6 +33,7 @@ export const Home=()=> {
         options={{height: 500}}
         />
         </div>
+        
       </div>      
        
 

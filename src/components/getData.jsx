@@ -36,8 +36,8 @@ export const updateAvatar=async (formdata)=>{
     
 }
 
-export const deleteUser=async (formdata)=>{
-    const response = await axios.delete(url+'auth/deleteUser', formdata)
+export const deleteUser=async (id)=>{
+    const response = await axios.get(url+'auth/deleteUser/'+id)
     return await response
 }
 

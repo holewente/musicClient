@@ -2,6 +2,8 @@ import React, { useState,useEffect } from 'react';
 import { motion } from "framer-motion";
 import { useQuery,useQueryClient,useMutation } from 'react-query'
 import { getUsers,deleteUser } from './getData'
+import ListGroup  from 'react-bootstrap/ListGroup';
+
 
 
 
@@ -26,17 +28,17 @@ export const DeleteUser = () => {
     >
       
         <div className='loginregisterpanel'>
-          <ul>
+          <ListGroup>
             {status=="success" && data.data.map(obj=>
-         <li key={obj.id}>
-          <span >
+         <ListGroup.Item className='bg-dark' key={obj.id}>
+          <span className='bg-dark'>
             <h4>{obj.username}</h4> <i className="fa-solid fa-trash text-danger fa-2x" onClick={()=>mutationDel.mutate(obj.id)} ></i>
           </span>
 
-         </li>
+         </ListGroup.Item>
          
             )}
-          </ul>
+          </ListGroup>
 
         </div>
     </motion.div>

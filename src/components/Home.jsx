@@ -4,7 +4,9 @@ import { TwitterTimelineEmbed, TwitterShareButton, TwitterFollowButton, TwitterH
 
 
 export const Home=()=> {
+  console.log("Ambatukam")
   return (
+
     <div className='text-center mt-5'>
       <motion.h1 initial={{y:-250}} animate={{y:60}} >
        Spoticloud Home Page <br />

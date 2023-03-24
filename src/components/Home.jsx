@@ -9,20 +9,29 @@ export const Home=()=> {
       <motion.h1 initial={{y:-250}} animate={{y:60}} >
        Spoticloud Home Page <br />
 
-      <div className="row">
-<div id="fb-root"></div>
-        <div class="fb-page" data-href="https://www.facebook.com/SoundCloud"
-        data-tabs="timeline" data-width="" data-height="" data-small-header="false" 
-        data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
-        <blockquote cite="https://www.facebook.com/SoundCloud" className="fb-xfbml-parse-ignore">
-          <a href="https://www.facebook.com/SoundCloud">SoundCloud</a></blockquote></div>
-
-        <TwitterTimelineEmbed
+      <div className='mt-5 row'>
+        <div className="col-md-4">
+          <TwitterTimelineEmbed
         sourceType="profile"
         screenName="spotify"
-        options={{height: 600}}
+        options={{height: 500}}
         />
-      </div>
+        </div>
+        <div className='col-md-4'>
+          <TwitterTimelineEmbed
+        sourceType="profile"
+        screenName="soundcloud"
+        options={{height: 500}}
+        />
+        </div>
+        <div className='col-md-4'>
+          <TwitterTimelineEmbed
+        sourceType="profile"
+        screenName="instagram"
+        options={{height: 500}}
+        />
+        </div>
+      </div>      
        
 
         <div className='howckep mt-5'>

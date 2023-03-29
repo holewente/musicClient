@@ -40,6 +40,10 @@ export const deleteUser=async (id)=>{
     const response = await axios.get(url+'auth/deleteUser/'+id)
     return await response
 }
+export const deleteMusic=async (id)=>{
+    const response = await axios.get(url+'music/deleteMusic/'+id)
+    return await response
+}
 
 export const changePassword=async (formdata)=>{
     const response = await axios.put(url+'auth/changePassword', formdata)
@@ -69,6 +73,10 @@ export const delMusic = async (id) => {
 
 export const getUsers = async () => {
     const response = await axios.get(url+'auth/users');
+    return await response;
+};
+export const getMusic = async () => {
+    const response = await axios.get(url+'music/library');
     return await response;
 };
 

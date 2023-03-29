@@ -14,6 +14,7 @@ import {UserProfile} from './components/UserProfile'
 import {QueryClient,QueryClientProvider} from 'react-query'
 import { Upload } from './components/Upload'
 import { DeleteUser } from './components/DeleteUser'
+import { DeleteMusic } from './components/DeleteMusic';
 import {
   Box,
   Container,
@@ -50,6 +51,8 @@ function App() {
       element={<UserProfile loggedInUser={loggedInUser} setLoggedInUser={setLoggedInUser}/>}/>}
       {loggedInUser?.role=='admin' &&
       <Route path='deleteuser' element={<DeleteUser/>}/>}
+      {loggedInUser?.role=='admin' &&
+      <Route path='deleteMusic' element={<DeleteMusic/>}/>}
       </Routes>
       </div>
 

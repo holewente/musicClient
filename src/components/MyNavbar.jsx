@@ -102,15 +102,21 @@ export const MyNavbar = ({ loggedInUser, setLoggedInUser }) => {
                   Admin Panel
                 </DropdownToggle>
                 <DropdownMenu end>
-                  <DropdownItem>User</DropdownItem>
-                  <DropdownItem>Products</DropdownItem>
+
                   <DropdownItem>
                     <NavItem>
                       {" "}
-                      <NavLink to="deleteuser">DeleteUser</NavLink>
+                      <NavLink to="deleteMusic">Tracks</NavLink>
+                    </NavItem>
+                    </DropdownItem>
+
+                  <DropdownItem>
+                    <NavItem>
+                      {" "}
+                      <NavLink to="deleteuser">Users</NavLink>
                     </NavItem>
                   </DropdownItem>
-                  <DropdownItem divider />
+                  
                 </DropdownMenu>
               </UncontrolledDropdown>
             )}

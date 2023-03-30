@@ -74,4 +74,10 @@
   .footer{
     width: 100%;
   }
-  
+  .fa-heart{
+    cursor: pointer;
+    
+  }
+  .fa-heart:hover{
+    color: red;
+  }

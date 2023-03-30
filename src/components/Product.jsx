@@ -5,21 +5,23 @@ import { useParams,useNavigate } from 'react-router-dom'
 //import Button from 'react-bootstrap/Button';
 //import Card from 'react-bootstrap/Card';
 import SpotifyPlayer from 'react-spotify-player';
-import { useQuery } from 'react-query'
+import { useQuery,useQueryClient,useMutation } from 'react-query'
 import { getUrl } from './getData'
 import { useRef } from 'react';
 import {MySpinner} from './MySpinner'
 import ReactPlayer from 'react-player/lazy';
+import { addFavorite } from './getData';
 
 
 
-export const Product=()=> {
+export const Product=({user_id})=> {
    
   const { data, status, isLoading } = useQuery("url", getUrl);
     const navigate = useNavigate()
     const [searchedText, setSearchedText] = useState("")
     const params = useParams()
     const [items, setItems] = useState([])
+    const clientQuery=useQueryClient()
     
 
     status=='success' && console.log(data.data)
@@ -52,6 +54,12 @@ export const Product=()=> {
 /*const filterNotes = cimszo.filter((noteText) => noteText.title.toLowerCase().includes(searchText.toLowerCase())); */
 
 console.log(isLoading,"isLoading")
+
+const addFav=(url)=>{
+  console.log(user_id,url)
+  addFavorite({user_id,link_url:url})
+}
+
   return (
     
     <div className='loginregisterpanel'>
@@ -69,7 +77,7 @@ console.log(isLoading,"isLoading")
         
          {status=='success' && items.map(obj=>
          <span key={obj.id}>
-          <h4 className='cimsor mt-5'>{obj.title}</h4>
+          <h4 className='cimsor mt-5'>{obj.title}<i class="fa-regular fa-heart" onClick={()=>addFav(obj.url)}></i></h4>
         
           {obj.url.includes('spotify') ? 
           <SpotifyPlayer uri={obj.url}

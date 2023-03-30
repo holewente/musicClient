@@ -42,7 +42,7 @@ function App() {
       <Route path='about' element={<About/>} />
       <Route path='contacts' element={<Contacts/>} />
       <Route path='products' element={loggedInUser?.id? <Products/> : <Login setLoggedInUser={setLoggedInUser}/>} />
-      <Route path='products/:id' element={loggedInUser?.id? <Product/> : <Login setLoggedInUser={setLoggedInUser}/>} />
+      <Route path='products/:id' element={loggedInUser?.id? <Product user_id={loggedInUser.id}/> : <Login setLoggedInUser={setLoggedInUser}/>} />
       <Route path='login' element={<Login setLoggedInUser={setLoggedInUser}/>} />
       <Route path='register' element={<Register/>} />
       <Route path='upload' element={loggedInUser?.id? <Upload/> : <Login setLoggedInUser={setLoggedInUser}/>} />

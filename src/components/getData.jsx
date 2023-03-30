@@ -80,3 +80,8 @@ export const getMusic = async () => {
     return await response;
 };
 
+export const addFavorite=async (formdata)=>{
+    const response = await axios.post(url+'auth/addFavorite', formdata)
+    return await response
+    
+}

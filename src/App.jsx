@@ -15,6 +15,7 @@ import {QueryClient,QueryClientProvider} from 'react-query'
 import { Upload } from './components/Upload'
 import { DeleteUser } from './components/DeleteUser'
 import { DeleteMusic } from './components/DeleteMusic';
+import { Favorite } from './components/Favorite';
 import {
   Box,
   Container,
@@ -53,6 +54,7 @@ function App() {
       <Route path='deleteuser' element={<DeleteUser/>}/>}
       {loggedInUser?.role=='admin' &&
       <Route path='deleteMusic' element={<DeleteMusic/>}/>}
+      <Route path='favorite' />
       </Routes>
       </div>
 

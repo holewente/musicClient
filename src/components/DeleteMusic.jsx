@@ -30,9 +30,10 @@ export const DeleteMusic = () => {
         <div className='loginregisterpanel'>
           <ListGroup>
             {status=="success" && data.data.map(obj=>
-         <ListGroup.Item className='bg-dark' key={obj.id}>
-          <span className='bg-dark'>
-            <h4>{obj.title}</h4> <i className="fa-solid fa-trash text-danger fa-2x" onClick={()=>mutationDel.mutate(obj.id)} ></i>
+         <ListGroup.Item className='bg-dark border border-success' key={obj.id}>
+          <span className='bg-dark zenesor'>
+            <h4 className='d-flex justify-content-between'><span>{obj.title} - {obj.url}</span> 
+            <span><i className="fa-solid fa-trash text-danger" onClick={()=>mutationDel.mutate(obj.id)} ></i></span></h4> 
           </span>
 
          </ListGroup.Item>

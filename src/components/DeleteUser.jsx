@@ -30,9 +30,9 @@ export const DeleteUser = () => {
         <div className='loginregisterpanel'>
           <ListGroup>
             {status=="success" && data.data.map(obj=>
-         <ListGroup.Item className='bg-dark' key={obj.id}>
-          <span className='bg-dark'>
-            <h4>{obj.username}</h4> <i className="fa-solid fa-trash text-danger fa-2x" onClick={()=>mutationDel.mutate(obj.id)} ></i>
+         <ListGroup.Item className='bg-dark border border-success' key={obj.id}>
+          <span className='bg-dark profilsor'>
+            <h4>{obj.username} - {obj.email}<i className="fa-solid fa-trash text-danger" onClick={()=>mutationDel.mutate(obj.id)} ></i></h4> 
           </span>
 
          </ListGroup.Item>

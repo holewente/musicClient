@@ -77,7 +77,7 @@ const addFav=(url)=>{
         
          {status=='success' && items.map(obj=>
          <span key={obj.id}>
-          <h4 className='cimsor mt-5'>{obj.title}<i class="fa-regular fa-heart" onClick={()=>addFav(obj.url)}></i></h4>
+          <h4 className='cimsor mt-5 d-flex justify-content-between'>{obj.title}<i className="fa-regular fa-heart" onClick={()=>addFav(obj.url)}></i></h4>
         
           {obj.url.includes('spotify') ? 
           <SpotifyPlayer uri={obj.url}

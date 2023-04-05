@@ -4,7 +4,6 @@ import { TwitterTimelineEmbed, TwitterShareButton, TwitterFollowButton, TwitterH
 
 
 export const Home=()=> {
-  console.log("Ambatukam AMBASSIIIIN OMAYGOT ")
   return (
 
     <div className='text-center mt-5 w-100'>

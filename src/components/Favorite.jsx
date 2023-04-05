@@ -14,7 +14,7 @@ import { addFavorite } from './getData';
 
 
 
-export const Product=({user_id})=> {
+export const Favorite=({user_id})=> {
    
   const { data, status, isLoading } = useQuery("url", getUrl);
     const navigate = useNavigate()

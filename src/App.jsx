@@ -32,7 +32,7 @@ const queryClient = new QueryClient()
 
 function App() {
   const [loggedInUser,setLoggedInUser]=useState({})
-  console.log(loggedInUser,"loggedInUser")
+  console.log(loggedInUser.id,"loggedInUser.id")
   return (
     <QueryClientProvider client={queryClient}>
       <MyNavbar loggedInUser={loggedInUser} setLoggedInUser={setLoggedInUser}/>
@@ -54,7 +54,9 @@ function App() {
       <Route path='deleteuser' element={<DeleteUser/>}/>}
       {loggedInUser?.role=='admin' &&
       <Route path='deleteMusic' element={<DeleteMusic/>}/>}
-      <Route path='favorite' />
+      
+      {loggedInUser.id && 
+      <Route path='favorite' element={<Favorite user_id={loggedInUser.id}/>}/>}
       </Routes>
       </div>
 

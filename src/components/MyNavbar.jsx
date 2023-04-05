@@ -120,7 +120,8 @@ export const MyNavbar = ({ loggedInUser, setLoggedInUser }) => {
                 </DropdownMenu>
               </UncontrolledDropdown>
             )}
-            <NavItem>
+            {loggedInUser.id &&
+            <NavItem> 
               <NavLink
                 to="favorite"
                 className="menuelemek nav-link active"
@@ -129,6 +130,7 @@ export const MyNavbar = ({ loggedInUser, setLoggedInUser }) => {
                 Favorites
               </NavLink>
             </NavItem>
+}
           </Nav>
 
           {loggedInUser?.username ? (

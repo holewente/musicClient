@@ -84,4 +84,10 @@ export const addFavorite=async (formdata)=>{
     const response = await axios.post(url+'auth/addFavorite', formdata)
     return await response
     
-}
+};
+
+export const getFavorites = async ({queryKey}) => {
+    console.log(queryKey)
+    const response = await axios.get(url+'auth/getFavorites/'+queryKey[1]);
+    return response;
+};

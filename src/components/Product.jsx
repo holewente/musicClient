@@ -58,6 +58,7 @@ console.log(isLoading,"isLoading")
 const addFav=(url)=>{
   console.log(user_id,url)
   addFavorite({user_id,link_url:url})
+  alert("Hozzáadva a kedvencekhez")
 }
 
   return (

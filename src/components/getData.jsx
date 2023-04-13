@@ -40,6 +40,10 @@ export const deleteUser=async (id)=>{
     const response = await axios.get(url+'auth/deleteUser/'+id)
     return await response
 }
+export const deleteFavorite=async (id)=>{
+    const response = await axios.get(url+'auth/deleteFavorite/'+id)
+    return await response
+}
 export const deleteMusic=async (id)=>{
     const response = await axios.get(url+'music/deleteMusic/'+id)
     return await response

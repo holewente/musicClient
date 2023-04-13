@@ -10,7 +10,7 @@ import { getUrl } from './getData'
 import { useRef } from 'react';
 import {MySpinner} from './MySpinner'
 import ReactPlayer from 'react-player/lazy';
-import { addFavorite,getFavorites } from './getData';
+import { addFavorite,getFavorites,deleteFavorite } from './getData';
 
 
 
@@ -26,6 +26,11 @@ export const Favorite=({user_id})=> {
     height: '500px'
     
   }
+  const delFav=(url)=>{
+    console.log(user_id,url)
+    deleteFavorite({user_id,link_url:url})
+    alert("Song has been successfully deleted from your Favorites.")
+  }
   
   return (
     
@@ -37,7 +42,7 @@ export const Favorite=({user_id})=> {
         
          {status=='success' && data.data.map(obj=>
          <span key={obj.id}>
-          <h4 className='cimsor mt-5'>{obj.title}</h4>
+          <h4 className='cimsor mt-5'>{obj.title} <i class="fa-regular fa-square-minus" onClick={()=>delFav(obj.url)}></i></h4>
         
           {obj.link_url.includes('spotify') ? 
           <SpotifyPlayer uri={obj.link_url}

@@ -55,7 +55,7 @@ export const Favorite=({user_id})=> {
           
       )}
       </div>
-    
+
   </div>
   )
 }

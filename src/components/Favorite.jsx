@@ -17,6 +17,13 @@ import { addFavorite,getFavorites,deleteFavorite } from './getData';
 export const Favorite=({user_id})=> {
    
   const { data, status, isLoading } = useQuery(["favorites",user_id], getFavorites);
+  const [items, setItems] = useState([])
+  const clientQuery=useQueryClient()
+  const mutationDel=useMutation(deleteFavorite,{
+    onSuccess:()=>{
+      clientQuery.invalidateQueries("favorites")
+    }
+  })
     
 
     status=='success' && console.log(data.data)

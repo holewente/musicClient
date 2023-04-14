@@ -84,3 +84,6 @@
   .fa-square-minus:hover{
     color: red;
   }
+  .fa-square-minus{
+    cursor: pointer;
+  }

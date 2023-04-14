@@ -28,7 +28,7 @@ export const Home=()=> {
         <div className='col-md-4'>
           <TwitterTimelineEmbed
         sourceType="profile"
-        screenName="instagram"
+        screenName="youtube"
         options={{height: 500}}
         />
         </div>

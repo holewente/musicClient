@@ -49,7 +49,7 @@ export const Favorite=({user_id})=> {
         
          {status=='success' && data.data.map(obj=>
          <span key={obj.id}>
-          <h4 className='cimsor mt-5'>{obj.title} <i class="fa-regular fa-square-minus" onClick={()=>mutationDel.mutate(obj.id)}></i></h4>
+          <h4 className='cimsor mt-5 d-flex justify-content-between'>{obj.title} <i class="fa-regular fa-square-minus" onClick={()=>mutationDel.mutate(obj.id)}></i></h4>
         
           {obj.link_url.includes('spotify') ? 
           <SpotifyPlayer uri={obj.link_url}

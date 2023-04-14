@@ -1,19 +1,19 @@
 import React, { useState,useEffect } from 'react';
 import { motion } from "framer-motion";
 import { useQuery,useQueryClient,useMutation } from 'react-query'
-import { getMusic,deleteMusic } from './getData'
+import { getMusic,deleteMusic,getFavorites,deleteFavorite } from './getData'
 import ListGroup  from 'react-bootstrap/ListGroup';
 
 
 
 
-export const DeleteMusic = () => {
-  const { data, status } = useQuery("library", getMusic);
+export const DeleteMusic = ({user_id}) => {
+  const { data, status, isLoading } = useQuery(["favorites","library",user_id], getMusic,getFavorites);
   const [items, setItems] = useState([])
   const clientQuery=useQueryClient()
-  const mutationDel=useMutation(deleteMusic,{
+  const mutationDel=useMutation(deleteMusic,deleteFavorite,{
     onSuccess:()=>{
-      clientQuery.invalidateQueries("library")
+      clientQuery.invalidateQueries("favorites","library")
     }
   })
   status=="success" && console.log(data.data)

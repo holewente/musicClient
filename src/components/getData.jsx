@@ -44,8 +44,8 @@ export const deleteFavorite=async (id)=>{
     const response = await axios.get(url+'auth/deleteFavorite/'+id)
     return await response
 }
-export const deleteMusic=async (id)=>{
-    const response = await axios.get(url+'music/deleteMusic/'+id)
+export const deleteMusic=async (link_url)=>{
+    const response = await axios.get(url+'music/deleteMusic/'+link_url)
     return await response
 }
 

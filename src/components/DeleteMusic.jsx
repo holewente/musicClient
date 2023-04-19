@@ -8,12 +8,12 @@ import ListGroup  from 'react-bootstrap/ListGroup';
 
 
 export const DeleteMusic = ({user_id}) => {
-  const { data, status, isLoading } = useQuery(["favorites","library",user_id], getMusic,getFavorites);
+  const { data, status, isLoading } = useQuery("library", getMusic);
   const [items, setItems] = useState([])
   const clientQuery=useQueryClient()
-  const mutationDel=useMutation(deleteMusic,deleteFavorite,{
+  const mutationDel=useMutation(deleteMusic,{
     onSuccess:()=>{
-      clientQuery.invalidateQueries("favorites","library")
+      clientQuery.invalidateQueries("library")
     }
   })
   status=="success" && console.log(data.data)
@@ -33,7 +33,7 @@ export const DeleteMusic = ({user_id}) => {
          <ListGroup.Item className='bg-dark border border-success' key={obj.id}>
           <span className='bg-dark zenesor'>
             <h4 className='d-flex justify-content-between'><span>{obj.title} - {obj.url}</span> 
-            <span><i className="fa-solid fa-trash text-danger" onClick={()=>mutationDel.mutate(obj.id)} ></i></span></h4> 
+            <span><i className="fa-solid fa-trash text-danger" onClick={()=>mutationDel.mutate(obj.url)} ></i></span></h4> 
           </span>
 
          </ListGroup.Item>

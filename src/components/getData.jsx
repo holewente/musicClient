@@ -45,7 +45,8 @@ export const deleteFavorite=async (id)=>{
     return await response
 }
 export const deleteMusic=async (link_url)=>{
-    const response = await axios.get(url+'music/deleteMusic/'+link_url)
+    console.log(link_url)
+    const response = await axios.get(url+'music/deleteMusic/'+encodeURIComponent(link_url))
     return await response
 }
 

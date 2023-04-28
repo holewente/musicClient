@@ -1,5 +1,6 @@
 import axios from 'axios';
-let url="http://localhost:5000/"
+/*let url="http://localhost:5000/"*/
+let url="https://musicserver-ubj7.onrender.com/"
 
 export const checkUsername=async (formdata)=>{
     const response = await axios.post(url+'auth/checkUsername', formdata)

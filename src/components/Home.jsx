@@ -37,10 +37,10 @@ export const Home=()=> {
        
 
         <div className='howckep mt-5'>
-        <img src='./img/howc.jfif' alt="loading..." />
+        
         </div>
         <div className='kep2'>
-        <img src="/img/kumala.gif" alt="kep2" />
+        
         </div>
       </motion.h1>
       

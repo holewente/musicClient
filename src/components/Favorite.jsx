@@ -29,7 +29,7 @@ export const Favorite=({user_id})=> {
     status=='success' && console.log(data.data)
 
   const size = {
-    width: '640px',
+    maxWidth: '640px',
     height: '500px'
     
   }

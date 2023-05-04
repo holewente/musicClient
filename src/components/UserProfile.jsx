@@ -1,6 +1,6 @@
 import React,{useState} from 'react'
 import { FileDrop } from './FileDrop'
-import {Form,FormGroup,Label,Input,Col,Button,Spinner} from 'reactstrap'
+import {Form,FormGroup,Label,Input,Col,Row,Button,Spinner} from 'reactstrap'
 import { useMutation } from 'react-query'
 import { updateAvatar,changePassword } from './getData'
 import { MyModal } from './MyModal'
@@ -50,9 +50,9 @@ export const UserProfile=({loggedInUser,setLoggedInUser})=> {
 })
 
   return (
-    <div className='loginregisterpanel'>
+    <div className='loginregisterpanel text-center mx-1'>
         <h6 className='p-2 text-center'>User Profile</h6>
-        <div className='row border p-1'>
+        <div className='row border mx-2 p-1'>
           <div className='col-2'>Email:</div>
           <div className='col-10'>{loggedInUser.email}</div>
         </div>
@@ -61,6 +61,7 @@ export const UserProfile=({loggedInUser,setLoggedInUser})=> {
     <Label className='mt-2' for="pw" >
       New Password
     </Label>
+    <Row className='text-center mx-1 justify-content-center'>
     <Col sm={8}>
     <Input
       id="pwd"
@@ -69,22 +70,25 @@ export const UserProfile=({loggedInUser,setLoggedInUser})=> {
       value={newPw} onChange={(e)=>setNewpw(e.target.value)}
     />
     </Col>
-    <Col sm={6}>
+    </Row>
+    <Row className='text-center mx-2 justify-content-center'>
+    <Col sm={6} className='mx-1'>
         <Input 
         type='button'
         disabled={!newPw || newPw.length<6}
         value='Change Password'
-        className='btn btn-primary mt-2'
+        className='btn btn-primary mx-2'
         onClick={handleChangePw}
         />
     </Col>
+    </Row>
   </FormGroup>
-    <FormGroup row>
+    <FormGroup row >
       <FileDrop setSelFile={setSelFile}/>
     </FormGroup>
     <FormGroup row>
       {!isUploading? 
-      <Input type='button' className='btn btn-primary m-1' value="Update avatar"
+      <Input type='button' className='btn btn-primary text-center justify-content-center mx-0.3 ' value="Update avatar"
       disabled={!selFile.name}
       onClick={handleUpdateAvatar}
       />
@@ -98,7 +102,7 @@ export const UserProfile=({loggedInUser,setLoggedInUser})=> {
     </span>
     </Button>
 }
-      <Input type='button' className='btn btn-danger m-1'
+      <Input type='button' className='btn text-center justify-content-center btn-danger mx-0.3  '
       onClick={handleDelete}
        value='Delete my profile'/>
     </FormGroup>
@@ -107,7 +111,7 @@ export const UserProfile=({loggedInUser,setLoggedInUser})=> {
     {modal && <MyModal modal={modal} setModal={setModal}
               username={loggedInUser.username} avatar_id={loggedInUser.avatar_id} setLoggedInUser={setLoggedInUser}/> }
               <h2>Your Profile:</h2>
-              <h3>{loggedInUser.username}</h3>
+              <h3>{loggedInUser.username}</h3> 
               <img className='profilkep' src={loggedInUser.avatar} alt="" />
     </div>
   )

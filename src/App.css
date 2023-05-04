@@ -8,20 +8,23 @@
     transform-origin: bottom left;
   
   }
+  .playercss{
+    max-width: 640px;
+  }
   .feltoltcss{
-    width: 500px;
+    max-width: 500px;
     background-color: white;
     color: black;
   }
   .aboutkeret{
     border: 1px solid white;
     border-radius: 25px;
-    width: 800px;
+    max-width: 800px;
   }
   .contactkeret{
     border: 1px solid white;
     border-radius: 25px;
-    width: 1000px;
+    max-width: 1000px;
   }
   .App {
     text-align: center;
